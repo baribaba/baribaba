@@ -13,14 +13,8 @@
       background: linear-gradient(135deg, #ff4d4d, #ff9999);
       color: white;
     }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      margin-bottom: 30px;
-      font-size: 1.2rem;
-    }
+    .hero h1 { font-size: 2rem; margin-bottom: 10px; }
+    .hero p { margin-bottom: 30px; font-size: 1.2rem; }
 
     /* Search Box Styling */
     .search-box {
@@ -38,13 +32,8 @@
       font-size: 1rem;
       box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
-    .search-box select {
-      background: white;
-      color: #333;
-    }
-    .search-box input {
-      width: 250px;
-    }
+    .search-box select { background: white; color: #333; }
+    .search-box input { width: 250px; }
     .search-box button {
       background: #333;
       color: white;
@@ -55,15 +44,10 @@
       font-size: 1rem;
       transition: background 0.3s;
     }
-    .search-box button:hover {
-      background: #000;
-    }
+    .search-box button:hover { background: #000; }
 
     /* Localities */
-    .localities {
-      padding: 40px 20px;
-      text-align: center;
-    }
+    .localities { padding: 40px 20px; text-align: center; }
     .locality-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -79,8 +63,87 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    .locality-buttons button:hover {
-      background: #e63e3e;
+    .locality-buttons button:hover { background: #e63e3e; }
+
+    /* About Us */
+    .about, .why-choose, .contact {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .about h2, .why-choose h2, .contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #ff4d4d;
+    }
+    .about p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Why Choose */
+    .why-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .why-item {
+      background: #fff5f5;
+      padding: 20px;
+      border-radius: 15px;
+      width: 280px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .why-item h3 {
+      color: #ff4d4d;
+      margin-bottom: 10px;
+    }
+    .why-item p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* Contact */
+    .contact-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .contact button {
+      background: #ff4d4d;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .contact button:hover { background: #e63e3e; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -129,8 +192,54 @@
     </div>
   </section>
 
+  <!-- ABOUT US -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>BariBaba is your trusted real estate partner, connecting buyers, renters, and sellers across India. 
+    Whether you're looking for your dream flat, a cozy PG, or the perfect commercial space, we make property 
+    discovery simple, transparent, and hassle-free.</p>
+  </section>
+
+  <!-- WHY CHOOSE BARIBABA -->
+  <section class="why-choose">
+    <h2>Why Choose BariBaba</h2>
+    <div class="why-list">
+      <div class="why-item">
+        <h3>Wide Range</h3>
+        <p>From budget-friendly homes to luxury properties, we cover it all.</p>
+      </div>
+      <div class="why-item">
+        <h3>Verified Listings</h3>
+        <p>Every property is carefully verified for authenticity.</p>
+      </div>
+      <div class="why-item">
+        <h3>Local Expertise</h3>
+        <p>We understand the local market and provide tailored recommendations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p>Email: support@baribaba.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BariBaba. All rights reserved.</p>
+  </footer>
+
   <script>
-    // Handle Search Button Click
     document.getElementById("searchBtn").addEventListener("click", function() {
       const city = document.getElementById("city").value;
       const query = document.getElementById("searchInput").value.trim();
