@@ -1,0 +1,42 @@
+:root{
+  --brand: #d62828; /* main red - replace if needed */
+  --accent: #f8f9fa;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  background: #fff;
+}
+
+/* logo sizes */
+.logo { width:60px; height:auto; }
+.site-logo { width:140px; }
+
+/* hero */
+.hero { background: linear-gradient(180deg, #fff 0%, #fff 100%); }
+.hero .display-5 { color: #111; }
+
+/* category cards */
+.category-card img { height:160px; object-fit:cover; }
+.category-card .card-body { min-height:150px; }
+
+/* why list */
+.why-list { list-style: none; padding-left: 0; }
+.why-list li { margin-bottom:10px; }
+
+/* listing card */
+.listing-card img { height:180px; object-fit:cover; }
+
+/* buttons and accents */
+.btn-primary { background: var(--brand); border-color: var(--brand); }
+.btn-primary:hover { background: #b71c1c; border-color: #b71c1c; }
+
+/* footer */
+footer { border-top: 1px solid #eee; }
+
+/* responsive adjustments */
+@media(max-width:767px){
+  .logo { width:48px; }
+  .site-logo { width:110px; }
+}
