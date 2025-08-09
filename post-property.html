@@ -1,84 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Post Property - BariBaba</title>
-  <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="BariBaba Logo"/>
-      <span>BariBaba</span>
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="search.html">Buy</a></li>
-      <li><a href="search.html">Rent</a></li>
-      <li><a href="search.html">PG/Co-Living</a></li>
-      <li><a href="search.html">Plots</a></li>
-    </ul>
-  </nav>
-
-  <!-- FORM SECTION -->
-  <section class="post-property-form">
-    <h1>Post Your Property</h1>
-    <form id="propertyForm">
-
-      <h3>Basic Details</h3>
-      <label>Property Title</label>
-      <input type="text" name="title" placeholder="e.g. 2BHK in Salt Lake" required/>
-
-      <label>Property Type</label>
-      <select name="type" required>
-        <option value="">Select</option>
-        <option value="Flat">Flat</option>
-        <option value="House">House</option>
-        <option value="Plot">Plot</option>
-        <option value="PG">PG/Co-Living</option>
-        <option value="Commercial">Commercial</option>
-      </select>
-
-      <label>Price</label>
-      <input type="number" name="price" placeholder="e.g. 5000000" required/>
-
-      <label>Location</label>
-      <input type="text" name="location" placeholder="City, Locality" required/>
-
-      <label>Area (sq ft)</label>
-      <input type="number" name="area" required/>
-
-      <h3>Images</h3>
-      <input type="file" name="images" multiple/>
-
-      <h3>Contact Info</h3>
-      <label>Name</label>
-      <input type="text" name="ownerName" required/>
-
-      <label>Phone</label>
-      <input type="tel" name="phone" required/>
-
-      <label>Email</label>
-      <input type="email" name="email"/>
-
-      <button type="submit">Post Property</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 BariBaba</p>
-  </footer>
-
 <script>
 document.getElementById("propertyForm").addEventListener("submit", function(e){
     e.preventDefault();
-    alert("Your property has been posted successfully! (Backend integration needed)");
+
+    // Get form data
+    let formData = {
+        title: this.title.value,
+        type: this.type.value,
+        price: this.price.value,
+        location: this.location.value,
+        area: this.area.value,
+        ownerName: this.ownerName.value,
+        phone: this.phone.value,
+        email: this.email.value
+    };
+
+    // Get existing properties from localStorage
+    let properties = JSON.parse(localStorage.getItem("properties")) || [];
+
+    // Add new property
+    properties.push(formData);
+
+    // Save back to localStorage
+    localStorage.setItem("properties", JSON.stringify(properties));
+
+    alert("Your property has been posted successfully!");
+    this.reset();
+
+    // Redirect to search.html
+    window.location.href = "search.html";
 });
 </script>
-
-</body>
-</html>
