@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6b6b;
+  padding: 10px 20px;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-post {
+  background: white;
+  color: #ff6b6b;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+  background: url('../images/banner1.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+.search-box {
+  margin-top: 20px;
+}
+
+.search-box select,
+.search-box input,
+.search-box button {
+  padding: 10px;
+  border: none;
+  margin: 5px;
+}
+
+.search-box button {
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+}
+
+.localities, .why {
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.locality-buttons button {
+  margin: 5px;
+  padding: 8px 15px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ff6b6b;
+  color: white;
+}
