@@ -41,3 +41,73 @@ footer { text-align:center; padding:16px; background:var(--nav-bg); color:#fff; 
 .container { max-width:1100px; margin:0 auto; padding:20px; }
 
 /* Search results & property cards will add styles in search.html CSS section */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 10px 20px;
+}
+
+.navbar .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-post, .btn-login, .btn-signup, .btn-logout {
+  background: #ff6600;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #e6f0ff;
+}
+
+.search-box {
+  margin-top: 20px;
+}
+
+.about, .why, .contact {
+  padding: 40px 20px;
+  background: white;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
