@@ -1,0 +1,101 @@
+/* css/style.css - BariBaba polished theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --primary:#FF6F00; /* BariBaba brand orange */
+  --accent:#7b6ef3;
+  --muted:#6b7280;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --maxw:1200px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:var(--bg);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* container helper */
+.container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+
+/* NAV */
+.navbar{
+  background:#0f1724;
+  color:#fff;
+  padding:14px 0;
+  box-shadow:0 6px 20px rgba(12,17,25,0.15);
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:44px;border-radius:6px}
+.brand .title{font-weight:700;color:#fff;font-size:1.05rem}
+.nav-links{display:flex;gap:14px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.9);text-decoration:none;padding:6px 10px;border-radius:8px}
+.nav-links a:hover{background:rgba(255,255,255,0.03)}
+
+/* HERO */
+.hero{
+  position:relative;
+  padding:72px 0 64px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#4f3e9b 0%, #7b6ef3 100%);
+  color:#fff;
+}
+.hero .hero-inner{position:relative;z-index:2}
+.hero .title{font-size:2.4rem;margin:0 0 8px;font-weight:700}
+.hero .subtitle{opacity:0.95;margin:0 0 18px}
+
+/* hero image (right) */
+.hero .hero-img{
+  position:absolute;right:0;top:0;height:100%;width:48%;object-fit:cover;opacity:0.92;
+  border-left:10px solid rgba(255,255,255,0.03)
+}
+
+/* Search Card */
+.search-card{
+  max-width:980px;margin:18px auto 0;background:rgba(255,255,255,0.12);
+  padding:14px;border-radius:12px;box-shadow:0 12px 40px rgba(8,10,20,0.25);
+}
+.search-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+.search-tabs button{background:transparent;border:0;color:rgba(255,255,255,0.9);padding:6px 12px;border-radius:999px;cursor:pointer;font-weight:600}
+.search-tabs button.active{background:rgba(255,255,255,0.15)}
+
+/* input group */
+.input-row{display:flex;gap:10px;align-items:center}
+.input-row select,.input-row input{padding:12px;border-radius:10px;border:0;outline:none;font-size:0.95rem}
+.input-row select{min-width:150px}
+.input-row input{flex:1}
+.btn-search{background:var(--primary);color:#fff;border-radius:10px;border:0;padding:10px 18px;font-weight:700;cursor:pointer}
+
+/* Popular chips */
+.popular{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.chip{background:rgba(255,255,255,0.12);color:#fff;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
+
+/* FEATURES section */
+.features{padding:48px 0}
+.card-plain{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(12,15,20,0.06)}
+
+/* RESULTS and CARDS */
+.results-section{padding:28px 18px}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.property-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(10,12,20,0.06);transition:transform .18s}
+.property-card:hover{transform:translateY(-6px)}
+.property-card img{width:100%;height:180px;object-fit:cover}
+.property-body{padding:12px}
+.price{color:var(--primary);font-weight:800}
+
+/* forms */
+.form-card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(12,15,20,0.06)}
+.form-card input,.form-card select,.form-card textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-top:8px}
+
+/* FOOTER */
+.footer{background:#061224;color:rgba(255,255,255,0.85);padding:18px}
+
+/* small screens */
+@media (max-width:980px){
+  .hero .hero-img{display:none}
+  .input-row{flex-direction:column;align-items:stretch}
+}
