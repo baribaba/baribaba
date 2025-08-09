@@ -1,0 +1,18 @@
+// client/js/post-property.js
+document.getElementById("postForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const fd = new FormData(form);
+
+  document.getElementById("status").innerText = "Posting...";
+  try {
+    const res = await fetch("/api/properties", { method: "POST", body: fd });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed");
+    document.getElementById("status").innerText = "Posted successfully!";
+    // Redirect to property page
+    window.location.href = "/property.html?id=" + data.property.id;
+  } catch (err) {
+    document.getElementById("status").innerText = "Error: " + err.message;
+  }
+});
