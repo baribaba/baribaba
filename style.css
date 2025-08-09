@@ -87,3 +87,43 @@
   height: 150px;
   object-fit: cover;
 }
+.post-property-form {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.post-property-form h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.post-property-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.post-property-form input,
+.post-property-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.post-property-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #ff6b6b;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.post-property-form button:hover {
+  background: #e95555;
+}
