@@ -1,45 +1,20 @@
-<script>
-let allProperties = [];
+<div class="search-box">
+  <select id="propertyType">
+    <option value="">All Types</option>
+    <option value="Flat">Flat</option>
+    <option value="Plot">Plot</option>
+    <option value="PG">PG</option>
+  </select>
 
-function loadProperties() {
-    allProperties = JSON.parse(localStorage.getItem("properties")) || [];
-    displayProperties(allProperties);
-}
+  <select id="priceRange">
+    <option value="">Any Price</option>
+    <option value="0-5000">Below ₹5,000</option>
+    <option value="5000-10000">₹5,000 - ₹10,000</option>
+    <option value="10000-20000">₹10,000 - ₹20,000</option>
+    <option value="20000-50000">₹20,000 - ₹50,000</option>
+    <option value="50000-9999999">Above ₹50,000</option>
+  </select>
 
-function displayProperties(properties) {
-    let propertyList = document.getElementById("propertyList");
-
-    if (properties.length === 0) {
-        propertyList.innerHTML = "<p>No properties found.</p>";
-        return;
-    }
-
-    propertyList.innerHTML = "";
-    properties.forEach((prop) => {
-        let card = document.createElement("div");
-        card.classList.add("property-card");
-        card.innerHTML = `
-            <h3>${prop.title}</h3>
-            <p>Type: ${prop.type}</p>
-            <p>Price: ₹${prop.price}</p>
-            <p>Location: ${prop.location}</p>
-            <p>Area: ${prop.area} sq ft</p>
-            <p>Contact: ${prop.ownerName} - ${prop.phone}</p>
-        `;
-        propertyList.appendChild(card);
-    });
-}
-
-document.getElementById("searchBtn").addEventListener("click", function(){
-    let searchValue = document.getElementById("searchInput").value.toLowerCase();
-    let filtered = allProperties.filter(prop =>
-        prop.location.toLowerCase().includes(searchValue) ||
-        prop.title.toLowerCase().includes(searchValue) ||
-        prop.type.toLowerCase().includes(searchValue)
-    );
-    displayProperties(filtered);
-});
-
-// Load properties on page load
-loadProperties();
-</script>
+  <input type="text" id="searchInput" placeholder="Search by location, landmark">
+  <button id="searchBtn">Search</button>
+</div>
