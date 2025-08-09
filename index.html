@@ -1,49 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BariBaba - Home</title>
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BariBaba – From Amar to Tomar, BariBaba is Shobar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="BariBaba Logo">
+      <span>BariBaba</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Buy</a></li>
+      <li><a href="#">Rent</a></li>
+      <li><a href="#">Commercial</a></li>
+      <li><a href="#">PG/Co-Living</a></li>
+      <li><a href="#">Plots</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="#" class="post-btn">Post Property</a>
+    </div>
+  </nav>
 
-<!-- NAVIGATION -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">
-    <img src="img/Baribaba.icon.png" alt="BariBaba Logo" height="40">
-    BariBaba
-  </a>
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-    <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
-    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>From Amar to Tomar – BariBaba is Shobar</h1>
+      <p>Your trusted partner for Flats, Plots, and PGs</p>
+      <div class="search-bar">
+        <select>
+          <option>Kolkata</option>
+          <option>New Town</option>
+          <option>Rajarhat</option>
+          <option>Behala</option>
+        </select>
+        <input type="text" placeholder="Search by locality, landmark, or builder">
+        <button>Search</button>
+      </div>
+    </div>
+  </section>
 
-<!-- HERO -->
-<header class="jumbotron text-center bg-primary text-white">
-  <h1>From Amar to Tomar – BariBaba is Shobar</h1>
-  <p>Your trusted partner for Flats, Plots, and PGs</p>
-</header>
+  <!-- Popular Localities -->
+  <section class="localities">
+    <h2>Popular Localities</h2>
+    <div class="locality-list">
+      <button>New Town</button>
+      <button>Rajarhat</button>
+      <button>Behala</button>
+      <button>Madhyamgram</button>
+      <button>Salt Lake</button>
+    </div>
+  </section>
 
-<!-- QUICK LINKS -->
-<div class="container text-center my-4">
-  <div class="row">
-    <div class="col-md-3"><a href="properties.html#sale" class="btn btn-outline-primary">Flat for Sale</a></div>
-    <div class="col-md-3"><a href="properties.html#rent" class="btn btn-outline-primary">Flat for Rent</a></div>
-    <div class="col-md-3"><a href="properties.html#plot" class="btn btn-outline-primary">Plot</a></div>
-    <div class="col-md-3"><a href="properties.html#pg" class="btn btn-outline-primary">PG</a></div>
-  </div>
-</div>
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Baribaba</h2>
+    <p>Founded in 2025 by <strong>Argha Chakraborty</strong> and <strong>Soumik Pramanik</strong>, Baribaba is your friendly neighborhood real estate platform designed to make property dealings simple, safe, and stress-free. Whether you are looking for a plot, a flat to rent, or a flat to buy, we bring all your options together in one place so you don’t have to run from one broker to another.</p>
+    <p>We believe in our tagline — “From Amar to Tomar – Baribaba is Shobar” — meaning we are here for everyone. Our goal is to connect people with the right property, at the right price, with complete transparency.</p>
+    <p>At Baribaba, we take away the confusion that usually comes with buying or renting property. Every listing is checked, details are clear, and the process is straightforward — so you can focus on finding your dream place while we handle the rest.</p>
+    <h3>Why People Choose Baribaba:</h3>
+    <ul>
+      <li>Easy to use: A simple website that anyone can use without tech skills.</li>
+      <li>Verified properties: No fake or misleading listings.</li>
+      <li>Wide choice: From small plots to luxury flats — we have it all.</li>
+      <li>Transparent deals: No hidden charges, no surprises.</li>
+      <li>Friendly help: Our support team is always here for you.</li>
+    </ul>
+    <h3>Our Vision:</h3>
+    <p>To make property search as easy as online shopping — quick, reliable, and stress-free for everyone in India.</p>
+    <p><strong>Founders:</strong> Argha Chakraborty & Soumik Pramanik<br>
+    <strong>Founded:</strong> 2025<br>
+    <strong>Contact:</strong> <a href="mailto:help@baribaba.com">help@baribaba.com</a></p>
+  </section>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3">
-  &copy; 2025 BariBaba | help@baribaba.com
-</footer>
+  <!-- Property Links -->
+  <section class="property-links">
+    <h2>Explore Properties</h2>
+    <div class="links-list">
+      <a href="flat-sale.html">Flat for Sale</a>
+      <a href="flat-rent.html">Flat for Rent</a>
+      <a href="plot.html">Plot</a>
+      <a href="pg.html">PG</a>
+    </div>
+  </section>
 
-<script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 BariBaba | <a href="mailto:help@baribaba.com">help@baribaba.com</a></p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
