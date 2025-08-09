@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BariBaba - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="BariBaba Logo">
+      <span>BariBaba</span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="search.html">Buy</a></li>
+      <li><a href="search.html">Rent</a></li>
+      <li><a href="search.html">PG/Co-Living</a></li>
+      <li><a href="search.html">Plots</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="post-property.html" class="btn-post">Post Property</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>From Amar to Tomar – BariBaba is Shobar</h1>
+    <p>Your trusted partner for Flats, Plots, and PGs</p>
+    <div class="search-box">
+      <select id="city">
+        <option value="Kolkata">Kolkata</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search by locality, landmark">
+      <button id="searchBtn">Search</button>
+    </div>
+  </section>
+
+  <!-- POPULAR LOCALITIES -->
+  <section class="localities">
+    <h2>Popular Localities</h2>
+    <div class="locality-buttons">
+      <button onclick="location.href='search.html?location=New%20Town'">New Town</button>
+      <button onclick="location.href='search.html?location=Rajarhat'">Rajarhat</button>
+      <button onclick="location.href='search.html?location=Behala'">Behala</button>
+      <button onclick="location.href='search.html?location=Madhyamgram'">Madhyamgram</button>
+      <button onclick="location.href='search.html?location=Salt%20Lake'">Salt Lake</button>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE BARIBABA -->
+  <section class="why">
+    <h2>Why Choose BariBaba?</h2>
+    <ul>
+      <li>✅ Easy to use: No tech skills needed.</li>
+      <li>✅ Verified properties: No fake or misleading listings.</li>
+      <li>✅ Wide choice: From small plots to luxury flats.</li>
+      <li>✅ Transparent deals: No hidden charges.</li>
+      <li>✅ Friendly support: Always here for you.</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 BariBaba | help@baribaba.com</p>
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
