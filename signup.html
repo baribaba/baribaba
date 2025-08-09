@@ -1,0 +1,50 @@
+<!-- client/signup.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign Up - BariBaba</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="navbar"><div class="navbar-inner container"><div class="brand"><img src="https://via.placeholder.com/80x40?text=BB"><span>BariBaba</span></div></div></header>
+
+  <main class="container">
+    <div class="form-card">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <label>Name</label><input name="name" required>
+        <label>Email</label><input name="email" type="email" required>
+        <label>Password</label><input name="password" type="password" required>
+        <div style="margin-top:10px"><button type="submit" class="btn-post">Register</button></div>
+        <p id="signupStatus" class="muted"></p>
+      </form>
+      <p>Already registered? <a href="/login.html">Login</a></p>
+    </div>
+  </main>
+
+<script>
+document.getElementById("signupForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const status = document.getElementById("signupStatus");
+  const form = new FormData(this);
+  const body = { name: form.get("name"), email: form.get("email"), password: form.get("password") };
+  try {
+    const res = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type":"application/json" },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Registration failed");
+    // store token
+    localStorage.setItem("baribaba_token", data.token);
+    localStorage.setItem("baribaba_user", JSON.stringify(data.user));
+    status.textContent = "Registered. Redirecting...";
+    setTimeout(() => location.href = "/", 800);
+  } catch (err) {
+    status.textContent = "Error: " + err.message;
+  }
+});
+</script>
+</body>
+</html>
