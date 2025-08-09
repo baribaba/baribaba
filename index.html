@@ -5,6 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BariBaba - Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ff4d4d, #ff9999);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+    }
+
+    /* Search Box Styling */
+    .search-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .search-box select,
+    .search-box input {
+      padding: 10px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .search-box select {
+      background: white;
+      color: #333;
+    }
+    .search-box input {
+      width: 250px;
+    }
+    .search-box button {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .search-box button:hover {
+      background: #000;
+    }
+
+    /* Localities */
+    .localities {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .locality-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .locality-buttons button {
+      padding: 10px 20px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .locality-buttons button:hover {
+      background: #e63e3e;
+    }
+  </style>
 </head>
 <body>
 
@@ -43,14 +121,25 @@
   <section class="localities">
     <h2>Popular Localities</h2>
     <div class="locality-buttons">
-      <button onclick="location.href='search.html?location=New%20Town'">New Town</button>
-      <button onclick="location.href='search.html?location=Rajarhat'">Rajarhat</button>
-      <button onclick="location.href='search.html?location=Behala'">Behala</button>
-      <button onclick="location.href='search.html?location=Madhyamgram'">Madhyamgram</button>
-      <button onclick="location.href='search.html?location=Salt%20Lake'">Salt Lake</button>
+      <button onclick="location.href='search.html?q=New%20Town'">New Town</button>
+      <button onclick="location.href='search.html?q=Rajarhat'">Rajarhat</button>
+      <button onclick="location.href='search.html?q=Behala'">Behala</button>
+      <button onclick="location.href='search.html?q=Madhyamgram'">Madhyamgram</button>
+      <button onclick="location.href='search.html?q=Salt%20Lake'">Salt Lake</button>
     </div>
   </section>
 
-  <script src="js/script.js"></script>
+  <script>
+    // Handle Search Button Click
+    document.getElementById("searchBtn").addEventListener("click", function() {
+      const city = document.getElementById("city").value;
+      const query = document.getElementById("searchInput").value.trim();
+      if(query) {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}&city=${encodeURIComponent(city)}`;
+      } else {
+        alert("Please enter a location to search.");
+      }
+    });
+  </script>
 </body>
 </html>
