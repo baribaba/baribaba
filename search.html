@@ -1,74 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BariBaba - Search Results</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<script>
+let allProperties = [];
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="BariBaba Logo">
-      <span>BariBaba</span>
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="search.html">Buy</a></li>
-      <li><a href="search.html">Rent</a></li>
-      <li><a href="search.html">PG/Co-Living</a></li>
-      <li><a href="search.html">Plots</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="post-property.html" class="btn-post">Post Property</a>
-  </nav>
+function loadProperties() {
+    allProperties = JSON.parse(localStorage.getItem("properties")) || [];
+    displayProperties(allProperties);
+}
 
-  <!-- SEARCH BAR -->
-  <section class="search-box center">
-    <select id="city">
-      <option value="Kolkata">Kolkata</option>
-      <option value="Delhi">Delhi</option>
-      <option value="Mumbai">Mumbai</option>
-    </select>
-    <input type="text" id="searchInput" placeholder="Search by locality, landmark">
-    <button id="searchBtn">Search</button>
-  </section>
+function displayProperties(properties) {
+    let propertyList = document.getElementById("propertyList");
 
-  <!-- FILTERS -->
-  <section class="filters">
-    <label>Price Range:
-      <select id="priceRange">
-        <option value="">Any</option>
-        <option value="0-2000000">Below ₹20 Lakh</option>
-        <option value="2000000-5000000">₹20–50 Lakh</option>
-        <option value="5000000-10000000">₹50 Lakh–1 Cr</option>
-        <option value="10000000">Above ₹1 Cr</option>
-      </select>
-    </label>
-    <label>Property Type:
-      <select id="typeFilter">
-        <option value="">Any</option>
-        <option value="Flat">Flat</option>
-        <option value="Plot">Plot</option>
-        <option value="PG">PG/Co-Living</option>
-      </select>
-    </label>
-    <button id="applyFilters">Apply Filters</button>
-  </section>
+    if (properties.length === 0) {
+        propertyList.innerHTML = "<p>No properties found.</p>";
+        return;
+    }
 
-  <!-- RESULTS -->
-  <section id="propertyList" class="property-list">
-    <!-- Property Cards injected by JS -->
-  </section>
+    propertyList.innerHTML = "";
+    properties.forEach((prop) => {
+        let card = document.createElement("div");
+        card.classList.add("property-card");
+        card.innerHTML = `
+            <h3>${prop.title}</h3>
+            <p>Type: ${prop.type}</p>
+            <p>Price: ₹${prop.price}</p>
+            <p>Location: ${prop.location}</p>
+            <p>Area: ${prop.area} sq ft</p>
+            <p>Contact: ${prop.ownerName} - ${prop.phone}</p>
+        `;
+        propertyList.appendChild(card);
+    });
+}
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 BariBaba | help@baribaba.com</p>
-  </footer>
+document.getElementById("searchBtn").addEventListener("click", function(){
+    let searchValue = document.getElementById("searchInput").value.toLowerCase();
+    let filtered = allProperties.filter(prop =>
+        prop.location.toLowerCase().includes(searchValue) ||
+        prop.title.toLowerCase().includes(searchValue) ||
+        prop.type.toLowerCase().includes(searchValue)
+    );
+    displayProperties(filtered);
+});
 
-<script src="js/search.js"></script>
-</body>
-</html>
+// Load properties on page load
+loadProperties();
+</script>
