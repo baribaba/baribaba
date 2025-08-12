@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baribaba - Your Trusted Property Partner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Baribaba.icon.png">
+</head>
+<body>
+    <header>
+        <img src="Baribaba.icon.png" alt="Baribaba Logo" class="logo">
+        <h1>Baribaba</h1>
+        <p class="tagline">Amar to tomar, Baribaba is sobar</p>
+    </header>
+
+    <section class="search-section">
+        <h2>Find Your Property</h2>
+        <input type="text" id="search" placeholder="Search by location, property type..." onkeyup="searchProperty()">
+    </section>
+
+    <section class="property-list" id="propertyList">
+        <div class="property">
+            <img src="40a01500-8678-4145-addf-83591901b4d2.png" alt="Property Image">
+            <h3>2BHK Apartment in Kolkata</h3>
+            <p>₹25,000/month · Salt Lake City</p>
+        </div>
+    </section>
+
+    <section class="post-section">
+        <h2>Post Your Property</h2>
+        <form id="postForm">
+            <input type="text" placeholder="Property Title" required>
+            <input type="text" placeholder="Price" required>
+            <input type="text" placeholder="Location" required>
+            <input type="file" accept="image/*" required>
+            <button type="submit">Post Property</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact us: <a href="mailto:help@baribaba.com">help@baribaba.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
