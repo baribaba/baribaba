@@ -1,19 +1,12 @@
-let category = "buy";
-
-function setCategory(cat) {
-    category = cat;
-    console.log("Category set to:", cat);
-}
-
 function searchProperty() {
-    let query = document.getElementById("searchInput").value;
-    if (query.trim() === "") {
-        alert("Please enter a location or landmark");
-        return;
-    }
-    window.location.href = `search.html?category=${category}&query=${encodeURIComponent(query)}`;
-}
-
-function quickSearch(location) {
-    window.location.href = `search.html?category=${category}&query=${encodeURIComponent(location)}`;
+    let query = document.getElementById("searchBox").value.toLowerCase();
+    let properties = document.querySelectorAll(".property-card");
+    properties.forEach(card => {
+        let title = card.querySelector("h2").innerText.toLowerCase();
+        if (title.includes(query)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
 }
