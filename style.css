@@ -1,83 +1,85 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #4b2b7f, #7a4fd3);
-    color: white;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
 }
+
 header {
+    text-align: center;
+    background-color: #0d6efd; /* Blue Brand Color */
+    color: white;
+    padding: 20px;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.tagline {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.contact {
+    font-size: 14px;
+}
+
+.search-section {
     text-align: center;
     padding: 20px;
 }
-.logo {
-    width: 80px;
+
+.search-section input {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-h1 {
-    margin: 10px 0;
-}
-.tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.tab {
-    padding: 10px 20px;
-    margin: 5px;
-    background: rgba(255,255,255,0.1);
+
+.search-section button {
+    padding: 10px 15px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-.tab:hover {
-    background: rgba(255,255,255,0.2);
-}
-.search-bar {
+
+.property-listings {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
+    gap: 15px;
+    padding: 20px;
 }
-.search-bar input {
-    padding: 12px;
-    width: 250px;
-    border: none;
-    border-radius: 5px 0 0 5px;
+
+.property-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.search-bar button {
-    padding: 12px 20px;
-    border: none;
-    background: #00c853;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
+
+.property-card img {
+    width: 100%;
+    border-radius: 10px;
 }
-.search-bar button:hover {
-    background: #009624;
-}
-.popular-localities {
+
+footer {
     text-align: center;
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px;
     margin-top: 20px;
-}
-.locality-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.locality {
-    background: rgba(255,255,255,0.1);
-    padding: 8px 15px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.locality:hover {
-    background: rgba(255,255,255,0.2);
-}
-.post-property {
-    text-align: center;
-    margin-top: 30px;
-}
-.post-property a {
-    background: orange;
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
