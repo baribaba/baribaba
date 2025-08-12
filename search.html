@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BariBaba – Search Results</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Search Results</h1>
+</header>
+
+<div id="results"></div>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get('category');
+const query = urlParams.get('query');
+
+document.getElementById("results").innerHTML = `
+<h2>Showing results for "${query}" (${category})</h2>
+<ul>
+<li>Example Property 1 in ${query}</li>
+<li>Example Property 2 in ${query}</li>
+<li>Example Property 3 in ${query}</li>
+</ul>
+`;
+</script>
+
+</body>
+</html>
