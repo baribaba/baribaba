@@ -1,65 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background: #f8faff;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8ff;
     color: #333;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background: #004aad; /* Brand blue */
+    background-color: #004aad;
     color: white;
-}
-
-.logo {
-    height: 60px;
-}
-
-.tagline {
-    font-style: italic;
-    margin-top: 5px;
-}
-
-.search-section, .post-section {
     text-align: center;
-    padding: 20px;
+    padding: 20px 10px;
 }
 
-input, button {
+header .logo {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    margin: 5px 0;
+    font-size: 28px;
+}
+
+header .tagline {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.search-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.search-section input {
     padding: 10px;
-    margin: 5px;
+    width: 300px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-button {
-    background: #004aad;
+.property-card {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-image {
+    width: 100%;
+    height: auto;
+}
+
+.property-info {
+    padding: 15px;
+}
+
+.property-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.price {
+    color: #555;
+    font-size: 14px;
+}
+
+.post-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.post-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-section input, .post-section button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.post-section button {
+    background-color: #004aad;
     color: white;
-    border: none;
     cursor: pointer;
 }
 
-button:hover {
-    background: #003580;
-}
-
-.property-list {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.property {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+footer {
     text-align: center;
-}
-
-.property img {
-    width: 300px;
-    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
 }
