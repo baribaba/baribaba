@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BariBaba – Find Property in Kolkata</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baribaba – Your Trusted Property Partner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Baribaba Logo">
+            <h1>Baribaba</h1>
+        </div>
+        <p class="tagline">Amar to Tomar, Baribaba is Sobar</p>
+        <p class="contact">📧 help@baribaba.com</p>
+    </header>
 
-<header>
-    <img src="images/logo.png" alt="BariBaba Logo" class="logo">
-    <h1>BariBaba – Property Search</h1>
-    <p>Clean, Affordable, and Verified Properties in Kolkata</p>
-</header>
+    <!-- Search Section -->
+    <section class="search-section">
+        <input type="text" id="searchBox" placeholder="Search properties in Kolkata...">
+        <button onclick="searchProperty()">🔍 Search</button>
+    </section>
 
-<!-- Tabs -->
-<div class="tabs">
-    <div class="tab" onclick="setCategory('buy')"><i class="fa-solid fa-house"></i> Buy</div>
-    <div class="tab" onclick="setCategory('rent')"><i class="fa-solid fa-key"></i> Rent</div>
-    <div class="tab" onclick="setCategory('commercial')"><i class="fa-solid fa-city"></i> Commercial</div>
-    <div class="tab" onclick="setCategory('pg')"><i class="fa-solid fa-users"></i> PG / Co-Living</div>
-    <div class="tab" onclick="setCategory('plots')"><i class="fa-solid fa-tree"></i> Plots</div>
-</div>
+    <!-- Property Listings -->
+    <section class="property-listings" id="propertyListings">
+        <!-- Example property card -->
+        <div class="property-card">
+            <img src="images/flat1.jpg" alt="Flat in Kolkata">
+            <h2>2BHK Flat in Salt Lake</h2>
+            <p>Price: ₹45 Lakhs</p>
+            <p>Location: Salt Lake, Kolkata</p>
+        </div>
+    </section>
 
-<!-- Search bar -->
-<div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search locality, landmark, or builder">
-    <button onclick="searchProperty()"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Baribaba. All rights reserved.</p>
+    </footer>
 
-<!-- Popular Localities -->
-<div class="popular-localities">
-    <h3>Popular Localities</h3>
-    <div class="locality-list">
-        <div class="locality" onclick="quickSearch('Salt Lake')"><i class="fa-solid fa-location-dot"></i> Salt Lake</div>
-        <div class="locality" onclick="quickSearch('Howrah')"><i class="fa-solid fa-location-dot"></i> Howrah</div>
-        <div class="locality" onclick="quickSearch('Behala')"><i class="fa-solid fa-location-dot"></i> Behala</div>
-        <div class="locality" onclick="quickSearch('New Town')"><i class="fa-solid fa-location-dot"></i> New Town</div>
-        <div class="locality" onclick="quickSearch('Garia')"><i class="fa-solid fa-location-dot"></i> Garia</div>
-    </div>
-</div>
-
-<!-- Post Property Button -->
-<div class="post-property">
-    <a href="post-property.html"><i class="fa-solid fa-plus"></i> Post Property</a>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
