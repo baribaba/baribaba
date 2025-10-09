@@ -6,11 +6,19 @@
   <title>YourRealty | Find Your Dream Home</title>
   <link href="style.css" rel="stylesheet" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Swiper.js for testimonials -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-content">
@@ -21,82 +29,26 @@
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
+        <a href="#properties">Properties</a>
         <a href="#founder">Founder</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="home" class="hero">
-    <div class="overlay">
+    <div class="overlay" data-aos="fade-up">
       <h2>Find the Perfect Home for You</h2>
       <p>Over 9K+ listings added daily and 65K+ verified properties</p>
 
       <div class="filter-tabs">
-        <button class="active">Rent</button>
-        <button>Buy</button>
-        <button>Commercial</button>
-        <button>Plots</button>
-        <button>PG</button>
+        <button class="active" onclick="selectTab(this)">Rent</button>
+        <button onclick="selectTab(this)">Buy</button>
+        <button onclick="selectTab(this)">Commercial</button>
+        <button onclick="selectTab(this)">Plots</button>
+        <button onclick="selectTab(this)">PG</button>
       </div>
 
       <div class="search-bar">
-        <input type="text" placeholder="Search '3 BHK Villa in Bhubaneswar'" />
-        <button><i class="fas fa-search"></i></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h3>Our Services</h3>
-    <div class="service-grid">
-      <div class="service-card">
-        <i class="fas fa-home"></i>
-        <h4>Property Listings</h4>
-        <p>Browse verified homes and apartments with real photos and details.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-cogs"></i>
-        <h4>Property Management</h4>
-        <p>End-to-end solutions for property owners, from tenants to maintenance.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-user-tie"></i>
-        <h4>Consulting & Legal Help</h4>
-        <p>Expert advice and legal assistance for all your real estate needs.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Founder Section -->
-  <section id="founder" class="founder">
-    <h3>About Our Founder</h3>
-    <img src="assets/founder.jpg" alt="Founder" />
-    <h4>Mr. [Founder Name]</h4>
-    <p>
-      Mr. Argha Chakraborty and Soumik Pramanik is the visionary behind YourRealty. With deep
-      experience in real estate and technology, they built this platform to
-      simplify the property search process for everyone.
-    </p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h3>Contact Us</h3>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 YourRealty | Designed with ❤️</p>
-  </footer>
-
-</body>
-</html>
+        <input type="text" placeholder="Search
