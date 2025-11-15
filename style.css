@@ -1,24 +1,94 @@
-/* ===========================
-   Light White–Purple Minimal
-   =========================== */
-
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-:root{
-  --bg: #f7f7fb;           /* page background */
-  --card: #ffffff;         /* card / white area */
-  --muted: #707090;        /* muted text */
-  --accent: #7b62ff;       /* primary purple */
-  --accent-2: #b79bff;     /* lighter accent */
-  --success: #28c79a;
-  --glass: rgba(255,255,255,0.65);
-  --shadow: 0 6px 18px rgba(59,49,88,0.08);
-  --radius: 12px;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  fo
+body {
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 45px;
+}
+
+nav a {
+  margin-right: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #444;
+}
+
+.post-btn {
+  background: #00c26f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  height: 75vh;
+  background: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(70, 0, 200, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Search Box */
+.search-box {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-b
