@@ -3,52 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YourRealty | Find Your Dream Home</title>
-  <link href="style.css" rel="stylesheet" />
-  <link rel="icon" href="assets/logo.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <!-- Swiper.js for testimonials -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>Real Estate Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-content">
-      <div class="nav-logo">
-        <img src="assets/logo.png" alt="Logo" />
-        <h1>YourRealty</h1>
-      </div>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#properties">Properties</a>
-        <a href="#founder">Founder</a>
-        <a href="#contact">Contact</a>
+  <header class="navbar">
+    <img src="logo.svg" alt="Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">Founders</a>
+      <button class="post-btn">Post Property</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Properties to Buy in India</h1>
+      <p>9K+ listings added daily and 63K+ total verified.</p>
+
+      <div class="search-box">
+        <select>
+          <option>Select City</option>
+          <option>Mumbai</option>
+          <option>Delhi</option>
+          <option>Bangalore</option>
+        </select>
+        <button class="search-btn">Search</button>
       </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="overlay" data-aos="fade-up">
-      <h2>Find the Perfect Home for You</h2>
-      <p>Over 9K+ listings added daily and 65K+ verified properties</p>
-
-      <div class="filter-tabs">
-        <button class="active" onclick="selectTab(this)">Rent</button>
-        <button onclick="selectTab(this)">Buy</button>
-        <button onclick="selectTab(this)">Commercial</button>
-        <button onclick="selectTab(this)">Plots</button>
-        <button onclick="selectTab(this)">PG</button>
+  <section class="top-picks">
+    <h2>Top Picks</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200" />
+        <h3>Shubh Nirvana</h3>
       </div>
-
-      <div class="search-bar">
-        <input type="text" placeholder="Search
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200" />
+        <h3>Shubh Veda</h3>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
