@@ -342,7 +342,19 @@
   <p>© 2026 Baribaba. All Rights Reserved.</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918240473982" target="_blank">💬</a>
+<script>
+  const whatsappBtn = document.getElementById("whatsappBtn");
+  const phone = "918240473982"; // Your WhatsApp number
+
+  // Pre-written message
+  const message = "Hello! I am interested in Baribaba's real estate services.";
+
+  whatsappBtn.onclick = function() {
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+</script>
+
 
 </body>
 </html>
