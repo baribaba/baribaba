@@ -3,94 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baribaba | From Amar To Tomar, Baribaba is Shobar</title>
 
-  <!-- Google Search Console Verification -->
- <meta name="google-site-verification" content="3WyPAnqVNnIQKasobyjyC35iL-jwJuyd3uIpLyZiLrE" />
-  <title>Baribaba</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background:#f7f7f7; color:#222; }
+
+    /* Navbar */
+    header { background:#fff; padding:16px 60px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 10px rgba(0,0,0,.06); position:sticky; top:0; z-index:100; }
+    header img { height:45px; }
+    nav a { margin-left:25px; text-decoration:none; color:#222; font-weight:500; }
+    nav a:hover { color:#d81f26; }
+
+    /* Hero */
+    .hero { background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('assets/images/hero.jpg') center/cover no-repeat; height:85vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding:20px; }
+    .hero h1 { font-size:48px; margin-bottom:10px; }
+    .hero p { font-size:18px; margin-bottom:30px; }
+
+    /* Search Bar */
+    .search-box { background:#fff; padding:20px; border-radius:10px; display:flex; gap:10px; max-width:900px; width:100%; }
+    .search-box select, .search-box input { flex:1; padding:14px; border:1px solid #ddd; border-radius:6px; }
+    .search-box button { background:#d81f26; color:#fff; border:none; padding:14px 30px; border-radius:6px; cursor:pointer; font-weight:600; }
+    .search-box button:hover { background:#b5171c; }
+
+    /* Section */
+    section { padding:80px 60px; }
+    .section-title { text-align:center; margin-bottom:50px; }
+    .section-title h2 { font-size:36px; margin-bottom:10px; }
+    .section-title p { color:#666; }
+
+    /* Categories */
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; }
+    .card { background:#fff; padding:30px; border-radius:12px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+
+    /* Founders */
+    .founders { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
+    .founder { background:#fff; padding:30px; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.08); text-align:center; }
+    .founder img { width:130px; height:130px; border-radius:50%; object-fit:cover; margin-bottom:15px; }
+
+    /* Footer */
+    footer { background:#111; color:#aaa; padding:40px 60px; text-align:center; }
+
+    /* WhatsApp */
+    .whatsapp { position:fixed; bottom:25px; right:25px; background:#25d366; color:#fff; padding:15px 18px; border-radius:50%; font-size:22px; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,.3); }
+
+    @media(max-width:768px){
+      header { padding:16px 25px; }
+      section { padding:60px 25px; }
+      .hero h1 { font-size:34px; }
+      .search-box { flex-direction:column; }
+    }
+  </style>
 </head>
-
 <body>
-  <header class="navbar">
-    <img src="logo.svg" alt="Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">Founders</a>
-      <button class="post-btn">Post Property</button>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Baribaba</h1>
-      <p>Amar to tomar Baribaba is sobar.</p>
+<header>
+  <img src="assets/images/logo.png" alt="Baribaba Logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="management.html">Management</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-      <div class="search-box">
-        <select>
-          <option>Select City</option>
-          <option>Mumbai</option>
-          <option>Delhi</option>
-          <option>Bangalore</option>
-          <option>Kolkata</option>
-          <option>Chennai</option>
-          <option>Ranchi</option>
-          <option>Pune</option>
-        </select>
-        <button class="search-btn">Search</button>
-      </div>
+<div class="hero">
+  <div>
+    <h1>From Amar To Tomar, Baribaba is Shobar</h1>
+    <p>Rent • Buy • Sell • Manage — All Real Estate Solutions in One Place</p>
+
+    <form class="search-box" action="search.html" method="GET">
+      <input type="text" name="location" placeholder="Enter Location" />
+      <select name="type">
+        <option value="">Property Type</option>
+        <option>Rent</option>
+        <option>Buy</option>
+      
+      </select>
+      <select name="category">
+        <option value="">Category</option>
+        <option>Flat</option>
+        <option>Room / PG</option>
+        <option>House</option>
+        <option>Office</option>
+        <option>Commercial</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<section>
+  <div class="section-title">
+    <h2>Property Categories</h2>
+    <p>Everything you need, all in one place</p>
+  </div>
+  <div class="grid">
+    <div class="card">Flats</div>
+    <div class="card">Rooms & PG</div>
+    <div class="card">Houses</div>
+    <div class="card">Office Spaces</div>
+    <div class="card">Commercial</div>
+    <div class="card">Plots</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Our Founders</h2>
+    <p>The people behind Baribaba</p>
+  </div>
+  <div class="founders">
+    <div class="founder">
+      <img src="assets/images/argha.jpg" alt="Argha Chakraborty" />
+      <h3>Argha Chakraborty</h3>
+      <p><strong>Co-Founder | Vision & Strategy</strong></p>
+      <p>Driven by transparency and trust, Argha leads Baribaba's long-term vision to simplify real estate for everyone.</p>
     </div>
-  </section>
-
-  <section class="top-picks">
-    <h2>Top Picks</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://via.placeholder.com/350x200" />
-        <h3>Argha Chakraborty</h3>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/350x200" />
-        <h3>Soumik Pramanik</h3>
-      </div>
+    <div class="founder">
+      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik" />
+      <h3>Soumik Pramanik</h3>
+      <p><strong>Co-Founder | Operations & Growth</strong></p>
+      <p>Soumik ensures smooth operations and scalable growth while keeping Baribaba people-first and reliable.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer MUST be inside body -->
-  <footer class="footer">
-    <div class="footer-container">
+<footer>
+  <p>© 2026 Baribaba. All Rights Reserved.</p>
+</footer>
 
-      <div class="footer-logo">
-        <svg width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
-          <rect width="180" height="50" fill="white" />
-          <text x="10" y="34" font-family="Arial" font-size="28" font-weight="700" fill="#6A0DFF">Bari</text>
-          <text x="95" y="34" font-family="Arial" font-size="28" font-weight="700" fill="#00C26F">baba</text>
-        </svg>
-        <p>Your trusted real-estate partner.</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Properties</a>
-        <a href="#">Contact</a>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>Email: help@baribaba.com</p>
-        <p>Phone: +91 9679208101</p>
-        <p>Kolkata, India</p>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      © 2025 BariBaba • All Rights Reserved
-    </div>
-  </footer>
+<a class="whatsapp" href="https://wa.me/918240473982" target="_blank">💬</a>
 
 </body>
 </html>
