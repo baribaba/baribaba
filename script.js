@@ -1,20 +1,18 @@
-// Basic JS interactions
+// Baribaba Global JS
+console.log("Baribaba website loaded");
 
-console.log("Website Loaded Successfully");
-
-// Future-ready structure for adding features
-
-// Example: City Selection Alert
+// Homepage search button (safe check)
 const searchBtn = document.querySelector('.search-btn');
-const citySelect = document.querySelector('select');
+const citySelect = document.querySelector('#citySelect'); // use ID
 
-if (searchBtn) {
+if (searchBtn && citySelect) {
   searchBtn.addEventListener('click', () => {
     const city = citySelect.value;
-    if (city === 'Select City') {
+
+    if (!city || city === 'Select City') {
       alert('Please select a city first!');
     } else {
-      alert(`Searching properties in ${city}...`);
+      window.location.href = `search.html?city=${city}`;
     }
   });
 }
