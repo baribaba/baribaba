@@ -8,6 +8,9 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome (for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body { background:#f7f7f7; color:#222; }
@@ -47,7 +50,33 @@
     /* Footer */
     footer { background:#111; color:#aaa; padding:40px 60px; text-align:center; }
 
-    /* WhatsApp */
+    .footer-social {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .footer-social a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #1f1f1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      background: #d81f26;
+      transform: translateY(-4px);
+    }
+
+    /* WhatsApp Floating */
     .whatsapp { position:fixed; bottom:25px; right:25px; background:#25d366; color:#fff; padding:15px 18px; border-radius:50%; font-size:22px; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,.3); }
 
     @media(max-width:768px){
@@ -82,7 +111,6 @@
         <option value="">Property Type</option>
         <option>Rent</option>
         <option>Buy</option>
-      
       </select>
       <select name="category">
         <option value="">Category</option>
@@ -134,6 +162,12 @@
 </section>
 
 <footer>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100087916466794" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/company/baribaba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/918240473982" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
   <p>© 2026 Baribaba. All Rights Reserved.</p>
 </footer>
 
