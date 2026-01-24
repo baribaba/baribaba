@@ -28,21 +28,7 @@
       z-index:100;
     }
 
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
-    .brand img {
-      height:45px;
-    }
-
-    .brand-name {
-      font-size:24px;
-      font-weight:700;
-      color:#d81f26;
-    }
+    header img { height:45px; }
 
     nav a {
       margin-left:25px;
@@ -52,6 +38,19 @@
     }
 
     nav a:hover { color:#d81f26; }
+    
+    .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d81f26; /* Baribaba brand color */
+}
+
 
     /* Hero */
     .hero {
@@ -100,7 +99,7 @@
 
     .search-box button:hover { background:#b5171c; }
 
-    /* Section */
+    /* Sections */
     section { padding:80px 60px; }
 
     .section-title {
@@ -128,6 +127,7 @@
       border-radius:12px;
       text-align:center;
       box-shadow:0 6px 20px rgba(0,0,0,.08);
+      font-weight:600;
     }
 
     /* Founders */
@@ -151,6 +151,39 @@
       border-radius:50%;
       object-fit:cover;
       margin-bottom:15px;
+    }
+
+    /* Post Property Section */
+    .post-property-section {
+      background:#fff;
+      text-align:center;
+      padding:90px 30px;
+    }
+
+    .post-property-section h2 {
+      font-size:38px;
+      margin-bottom:15px;
+    }
+
+    .post-property-section p {
+      color:#666;
+      font-size:18px;
+      margin-bottom:35px;
+    }
+
+    .post-property-btn {
+      background:#d81f26;
+      color:#fff;
+      padding:16px 45px;
+      border-radius:40px;
+      font-size:18px;
+      font-weight:600;
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
+    }
+
+    .post-property-btn:hover {
+      background:#b5171c;
     }
 
     /* Footer */
@@ -178,7 +211,7 @@
       justify-content:center;
       color:#fff;
       font-size:18px;
-      transition:all .3s ease;
+      transition:.3s;
       text-decoration:none;
     }
 
@@ -213,9 +246,10 @@
 
 <header>
   <div class="brand">
-    <img src="assets/images/logo.png" alt="Baribaba Logo">
+    <img src="assets/images/logo.png" alt="Baribaba Logo" />
     <span class="brand-name">Baribaba</span>
   </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="management.html">Management</a>
@@ -225,7 +259,85 @@
   </nav>
 </header>
 
-<!-- REST OF YOUR PAGE IS UNCHANGED -->
+<div class="hero">
+  <div>
+    <h1>From Amar To Tomar, Baribaba is Shobar</h1>
+    <p>Rent • Buy • Sell • Manage — All Real Estate Solutions in One Place</p>
+
+    <form class="search-box" action="search.html" method="GET">
+      <input type="text" name="location" placeholder="Enter Location" />
+      <select name="type">
+        <option value="">Property Type</option>
+        <option>Rent</option>
+        <option>Buy</option>
+      </select>
+      <select name="category">
+        <option value="">Category</option>
+        <option>Flat</option>
+        <option>Room / PG</option>
+        <option>House</option>
+        <option>Office</option>
+        <option>Commercial</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<section>
+  <div class="section-title">
+    <h2>Property Categories</h2>
+    <p>Everything you need, all in one place</p>
+  </div>
+  <div class="grid">
+    <div class="card">Flats</div>
+    <div class="card">Rooms & PG</div>
+    <div class="card">Houses</div>
+    <div class="card">Office Spaces</div>
+    <div class="card">Commercial</div>
+    <div class="card">Plots</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Our Founders</h2>
+    <p>The people behind Baribaba</p>
+  </div>
+  <div class="founders">
+    <div class="founder">
+      <img src="assets/images/argha.jpg" alt="Argha Chakraborty" />
+      <h3>Argha Chakraborty</h3>
+      <p><strong>Co-Founder | Vision & Strategy</strong></p>
+      <p>Driven by transparency and trust, Argha leads Baribaba's long-term vision.</p>
+    </div>
+    <div class="founder">
+      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik" />
+      <h3>Soumik Pramanik</h3>
+      <p><strong>Co-Founder | Operations & Growth</strong></p>
+      <p>Ensures smooth operations and scalable growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- POST PROPERTY SECTION -->
+<section class="post-property-section">
+  <h2>Have a Property to Rent or Sell?</h2>
+  <p>Post your property on Baribaba and connect with genuine tenants & buyers.</p>
+  <a href="post-property.html" class="post-property-btn">Post Property</a>
+</section>
+
+<footer>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100087916466794" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/company/baribaba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/918240473982" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>© 2026 Baribaba. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918240473982" target="_blank">💬</a>
 
 </body>
 </html>
