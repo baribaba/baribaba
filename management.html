@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baribaba Management | Friendly & Transparent</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+    body { background:#f7f7f7; color:#222; }
+
+    header { background:#fff; padding:16px 60px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    header img { height:40px; }
+    nav a { margin-left:25px; text-decoration:none; color:#222; font-weight:500; }
+    nav a:hover { color:#d81f26; }
+
+    .hero { background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('assets/images/hero.jpg') center/cover no-repeat; padding:90px 60px; color:#fff; text-align:center; }
+    .hero h1 { font-size:42px; margin-bottom:10px; }
+    .hero p { font-size:18px; }
+
+    section { padding:80px 60px; }
+    .section-title { text-align:center; margin-bottom:45px; }
+    .section-title h2 { font-size:36px; margin-bottom:10px; }
+    .section-title p { color:#666; max-width:700px; margin:auto; }
+
+    .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; }
+    .step { background:#fff; padding:35px; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.08); text-align:center; }
+    .step span { display:inline-block; background:#d81f26; color:#fff; width:38px; height:38px; border-radius:50%; line-height:38px; font-weight:700; margin-bottom:15px; }
+
+    .promise { background:#fff; border-radius:18px; padding:50px; max-width:900px; margin:80px auto 0; box-shadow:0 10px 30px rgba(0,0,0,.1); text-align:center; }
+    .promise h3 { font-size:28px; margin-bottom:15px; }
+    .promise p { color:#555; line-height:1.7; }
+
+    footer { background:#111; color:#aaa; text-align:center; padding:35px; margin-top:80px; }
+
+    @media(max-width:768px){
+      header, section, .hero { padding:40px 25px; }
+      .hero h1 { font-size:32px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="assets/images/logo.png" alt="Baribaba Logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="management.html">Management</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>How Baribaba Management Works</h1>
+  <p>Simple, friendly & stress-free property solutions</p>
+</div>
+
+<section>
+  <div class="section-title">
+    <h2>Our Friendly Management Process</h2>
+    <p>We believe real estate should feel easy, honest, and human — not confusing or stressful.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step"><span>1</span><h3>Understand Your Needs</h3><p>We listen first — whether you are a tenant, buyer, seller, or property owner.</p></div>
+    <div class="step"><span>2</span><h3>Right Property Matching</h3><p>We suggest properties that truly fit your budget, location, and lifestyle.</p></div>
+    <div class="step"><span>3</span><h3>Clear Communication</h3><p>No hidden charges, no confusion — everything explained clearly.</p></div>
+    <div class="step"><span>4</span><h3>Smooth Closing</h3><p>From visits to paperwork, we stay with you till the final handover.</p></div>
+  </div>
+
+  <div class="promise">
+    <h3>Our Promise to You</h3>
+    <p>At Baribaba, we don’t just deal in properties — we help people find places where life happens. Whether it’s a student’s first room, a family’s dream home, or a business space, our promise is simple: honesty, care, and support at every step.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Baribaba. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
