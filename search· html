@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Results | Baribaba</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+    body { background:#f6f6f6; color:#222; }
+
+    header { background:#fff; padding:16px 60px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    header img { height:40px; }
+    nav a { margin-left:25px; text-decoration:none; color:#222; font-weight:500; }
+    nav a:hover { color:#d81f26; }
+
+    .container { padding:60px; }
+
+    .title { margin-bottom:30px; }
+    .title h1 { font-size:32px; }
+    .title p { color:#666; margin-top:8px; }
+
+    .results { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; }
+
+    .property { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+    .property img { width:100%; height:190px; object-fit:cover; }
+    .property div { padding:20px; }
+    .property h3 { margin-bottom:6px; }
+    .tag { display:inline-block; background:#d81f26; color:#fff; padding:4px 10px; border-radius:20px; font-size:12px; margin-bottom:10px; }
+
+    footer { background:#111; color:#aaa; text-align:center; padding:30px; margin-top:60px; }
+
+    @media(max-width:768px){
+      header, .container { padding:25px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="assets/images/logo.png" alt="Baribaba" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="title">
+    <h1>Search Results</h1>
+    <p id="searchInfo"></p>
+  </div>
+
+  <div class="results" id="results"></div>
+</div>
+
+<footer>
+  <p>© 2026 Baribaba. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const location = params.get('location') || 'All Locations';
+  const type = params.get('type') || 'Any Type';
+  const category = params.get('category') || 'Any Category';
+
+  document.getElementById('searchInfo').innerText = `Showing results for ${type} ${category} in ${location}`;
+
+  const dummyProperties = [
+    { title:'2BHK Flat', tag:'Rent', img:'assets/images/property1.jpg', place:'Kolkata' },
+    { title:'Office Space', tag:'Commercial', img:'assets/images/property2.jpg', place:'Salt Lake' },
+    { title:'PG for Students', tag:'Rent', img:'assets/images/property3.jpg', place:'Howrah' }
+  ];
+
+  const container = document.getElementById('results');
+
+  dummyProperties.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'property';
+    card.innerHTML = `
+      <img src="${p.img}" />
+      <div>
+        <span class="tag">${p.tag}</span>
+        <h3>${p.title}</h3>
+        <p>${p.place}</p>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
