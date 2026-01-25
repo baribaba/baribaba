@@ -163,6 +163,22 @@
     #about-us h3 { color:#222; font-size:24px; margin-bottom:30px; text-align:center; }
     #about-us p { font-size:16px; line-height:1.8; color:#333; margin-bottom:15px; max-width:900px; margin-left:auto; margin-right:auto; text-align:center; }
 
+    /* FAQ Section */
+    #faq { background:#fff; padding:80px 30px; }
+    #faq h2 { color:#d81f26; font-size:36px; text-align:center; margin-bottom:50px; }
+    .faq-item {
+      border:1px solid #ddd;
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:15px;
+      cursor:pointer;
+      transition:0.3s;
+      background:#f8f8f8;
+    }
+    .faq-item:hover { box-shadow:0 6px 20px rgba(0,0,0,.08); }
+    .faq-question { font-weight:600; color:#222; font-size:18px; display:flex; justify-content:space-between; align-items:center; }
+    .faq-answer { display:none; margin-top:10px; color:#555; font-size:16px; line-height:1.6; }
+
     /* Footer */
     footer {
       background:#111;
@@ -320,6 +336,72 @@
   </div>
 </section>
 
+<!-- FAQ Section -->
+<section id="faq">
+  <h2>Baribaba FAQ</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">1. What is Baribaba? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Baribaba is a modern property coordination platform that connects property seekers and owners seamlessly. Our motto is “From Amar to Tomar, Baribaba is Shobar”, meaning we make property services accessible to everyone.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">2. How does Baribaba work? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Baribaba simplifies property buying, selling, or renting by coordinating between property owners, agents, and customers. You can post a property, search for properties, or request our team’s assistance directly through the platform.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">3. Who can use Baribaba? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Anyone looking to buy, sell, or rent a property in Kolkata and surrounding areas can use Baribaba. Property owners, tenants, and real estate agents are all welcome to join our platform.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">4. Is there a fee to use Baribaba? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Creating an account and browsing properties is free. Certain services, like premium listings or property coordination support, may have associated charges, which are clearly communicated before use.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">5. How can I post my property on Baribaba? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">You can post your property by filling out our “Post Property” form on the website. Provide details like property type, location, price, and images, and our team will review and list it promptly.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">6. How can I contact Baribaba for support? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">You can reach us via:<br>Email: help@baribaba.com<br>Phone: 8240473982<br>WhatsApp: Available for direct queries on our contact page</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">7. How quickly are properties verified or listed? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Our team usually reviews and lists properties within 24–48 hours. Verification ensures the authenticity and quality of each listing.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">8. Is Baribaba only for Kolkata? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Currently, Baribaba primarily operates in Kolkata and nearby areas. We plan to expand to other cities soon.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">9. Can Baribaba help with property legalities? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">While Baribaba is a coordination platform, we provide guidance and connect you with trusted professionals for legal documentation, property verification, and RERA compliance.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">10. Who founded Baribaba? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Baribaba was founded by Argha Chakraborty and Soumik Pramanik, with the mission of making property services simple, transparent, and accessible to everyone.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">11. What makes Baribaba different from other real estate platforms? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">Unlike traditional property portals, Baribaba focuses on coordination and transparency. We ensure that users get verified listings, personalized support, and a hassle-free property experience.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">12. How can I stay updated on new listings and offers? <i class="fas fa-chevron-down"></i></div>
+    <div class="faq-answer">You can subscribe to our newsletter, follow us on social media, or enable notifications on the website to receive updates on the latest properties and offers.</div>
+  </div>
+
+</section>
+
 <footer>
   <div class="footer-social">
     <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -334,6 +416,7 @@
 <a class="whatsapp" id="whatsappBtn" href="#">💬</a>
 
 <script>
+  // WhatsApp Button
   const whatsappBtn = document.getElementById("whatsappBtn");
   const phone = "918240473982"; 
   const message = "Hello! I am interested in Baribaba's real estate services.";
@@ -342,7 +425,6 @@
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
-</script>
 
-</body>
-</html>
+  // FAQ Toggle
+  const faq
