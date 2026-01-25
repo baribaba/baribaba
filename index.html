@@ -1,12 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
   <title>Baribaba | From Amar To Tomar, Baribaba is Shobar</title>
 
   <!-- Google Font -->
@@ -16,270 +13,229 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+    body { background:#f7f7f7; color:#222; }
 
-    body {
-      background: #f7f7f7;
-      color: #222;
-    }
-
-    /* ================= NAVBAR ================= */
+    /* Navbar */
     header {
-      background: #ffffff;
-      padding: 14px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      background:#fff;
+      padding:16px 60px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow:0 2px 10px rgba(0,0,0,.06);
+      position:sticky;
+      top:0;
+      z-index:100;
     }
+
+    header img { height:45px; }
+
+    nav a {
+      margin-left:25px;
+      text-decoration:none;
+      color:#222;
+      font-weight:500;
+    }
+
+    nav a:hover { color:#d81f26; }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand img {
-      height: 42px;
-      width: auto;
-      display: block;
-      object-fit: contain;
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
 
     .brand-name {
-      font-size: 24px;
-      font-weight: 700;
-      color: #d81f26;
+      font-size:24px;
+      font-weight:700;
+      color:#d81f26;
     }
 
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #d81f26;
-    }
-
-    /* ================= HERO ================= */
+    /* Hero */
     .hero {
-      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-      url("assets/images/hero.jpg") center/cover no-repeat;
-      height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      padding: 20px;
+      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      url('assets/images/hero.jpg') center/cover no-repeat;
+      height:85vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      padding:20px;
     }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+    .hero h1 { font-size:48px; margin-bottom:10px; }
+    .hero p { font-size:18px; margin-bottom:30px; }
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    /* ================= SEARCH ================= */
+    /* Search Box */
     .search-box {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      display: flex;
-      gap: 10px;
-      max-width: 900px;
-      width: 100%;
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      display:flex;
+      gap:10px;
+      max-width:900px;
+      width:100%;
     }
 
-    .search-box input,
-    .search-box select {
-      flex: 1;
-      padding: 14px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
+    .search-box select,
+    .search-box input {
+      flex:1;
+      padding:14px;
+      border:1px solid #ddd;
+      border-radius:6px;
     }
 
     .search-box button {
-      background: #d81f26;
-      color: #fff;
-      border: none;
-      padding: 14px 30px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
+      background:#d81f26;
+      color:#fff;
+      border:none;
+      padding:14px 30px;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:600;
     }
 
-    .search-box button:hover {
-      background: #b5171c;
-    }
+    .search-box button:hover { background:#b5171c; }
 
-    /* ================= SECTIONS ================= */
-    section {
-      padding: 80px 60px;
-    }
+    /* Sections */
+    section { padding:80px 60px; }
 
     .section-title {
-      text-align: center;
-      margin-bottom: 50px;
+      text-align:center;
+      margin-bottom:50px;
     }
 
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+    .section-title h2 { font-size:36px; margin-bottom:10px; }
+    .section-title p { color:#666; }
 
-    .section-title p {
-      color: #666;
-    }
-
-    /* ================= GRID ================= */
+    /* Grid / Categories */
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
     }
 
     .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,.08);
-      font-weight: 600;
+      background:#fff;
+      padding:30px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+      font-weight:600;
     }
 
-    /* ================= FOUNDERS ================= */
+    /* Founders */
     .founders {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
     }
 
     .founder {
-      background: #fff;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.08);
-      text-align: center;
+      background:#fff;
+      padding:30px;
+      border-radius:14px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+      text-align:center;
     }
 
     .founder img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:15px;
     }
 
-    /* ================= POST PROPERTY ================= */
+    /* Post Property Section */
     .post-property-section {
-      background: #fff;
-      text-align: center;
-      padding: 90px 30px;
+      background:#fff;
+      text-align:center;
+      padding:90px 30px;
     }
+
+    .post-property-section h2 { font-size:38px; margin-bottom:15px; }
+    .post-property-section p { color:#666; font-size:18px; margin-bottom:35px; }
 
     .post-property-btn {
-      background: #d81f26;
-      color: #fff;
-      padding: 16px 45px;
-      border-radius: 40px;
-      font-size: 18px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
+      background:#d81f26;
+      color:#fff;
+      padding:16px 45px;
+      border-radius:40px;
+      font-size:18px;
+      font-weight:600;
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
     }
 
-    /* ================= FOOTER ================= */
+    .post-property-btn:hover { background:#b5171c; }
+
+    /* Footer */
     footer {
-      background: #111;
-      color: #aaa;
-      padding: 40px 60px;
-      text-align: center;
+      background:#111;
+      color:#aaa;
+      padding:40px 60px;
+      text-align:center;
     }
 
     .footer-social {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-bottom: 20px;
+      margin-bottom:20px;
+      display:flex;
+      justify-content:center;
+      gap:18px;
     }
 
     .footer-social a {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: #1f1f1f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 18px;
-      text-decoration: none;
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      background:#1f1f1f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:18px;
+      transition:.3s;
+      text-decoration:none;
     }
 
     .footer-social a:hover {
-      background: #d81f26;
+      background:#d81f26;
+      transform:translateY(-4px);
     }
 
-    /* ================= WHATSAPP ================= */
+    /* WhatsApp Floating Button */
     .whatsapp {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: #fff;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0,0,0,.3);
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background:#25d366;
+      color:#fff;
+      padding:15px 18px;
+      border-radius:50%;
+      font-size:22px;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,.3);
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
 
-    /* ================= MOBILE ================= */
-    @media (max-width: 768px) {
-      header {
-        padding: 14px 25px;
-      }
-      nav {
-        display: none;
-      }
-      .hero h1 {
-        font-size: 34px;
-      }
-      .search-box {
-        flex-direction: column;
-      }
-      section {
-        padding: 60px 25px;
-      }
+    @media(max-width:768px){
+      header { padding:16px 25px; }
+      section { padding:60px 25px; }
+      .hero h1 { font-size:34px; }
+      .search-box { flex-direction:column; }
     }
   </style>
 </head>
-
 <body>
 
 <header>
   <div class="brand">
-    <!-- 🔴 LOGO PATH FIXED HERE -->
-    <img src="assets/images/logo.png" alt="Baribaba Logo">
+    <img src="assets/images/logo.png" alt="Baribaba Logo" />
     <span class="brand-name">Baribaba</span>
   </div>
 
@@ -297,37 +253,95 @@
     <h1>From Amar To Tomar, Baribaba is Shobar</h1>
     <p>Rent • Buy • Sell • Manage — All Real Estate Solutions in One Place</p>
 
-    <form class="search-box">
-      <input type="text" placeholder="Enter Location">
-      <select>
-        <option>Property Type</option>
+    <form class="search-box" action="search.html" method="GET">
+      <input type="text" name="location" placeholder="Enter Location" />
+      <select name="type">
+        <option value="">Property Type</option>
         <option>Rent</option>
         <option>Buy</option>
       </select>
-      <select>
-        <option>Category</option>
+      <select name="category">
+        <option value="">Category</option>
         <option>Flat</option>
+        <option>Room / PG</option>
         <option>House</option>
         <option>Office</option>
+        <option>Commercial</option>
       </select>
-      <button>Search</button>
+      <button type="submit">Search</button>
     </form>
   </div>
 </div>
 
+<section>
+  <div class="section-title">
+    <h2>Property Categories</h2>
+    <p>Everything you need, all in one place</p>
+  </div>
+  <div class="grid">
+    <div class="card">Flats</div>
+    <div class="card">Rooms & PG</div>
+    <div class="card">Houses</div>
+    <div class="card">Office Spaces</div>
+    <div class="card">Commercial</div>
+    <div class="card">Plots</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Our Founders</h2>
+    <p>The people behind Baribaba</p>
+  </div>
+  <div class="founders">
+    <div class="founder">
+      <img src="assets/images/argha.jpg" alt="Argha Chakraborty" />
+      <h3>Argha Chakraborty</h3>
+      <p><strong>Co-Founder | Vision & Strategy</strong></p>
+      <p>Driven by transparency and trust, Argha leads Baribaba's long-term vision.</p>
+    </div>
+    <div class="founder">
+      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik" />
+      <h3>Soumik Pramanik</h3>
+      <p><strong>Co-Founder | Operations & Growth</strong></p>
+      <p>Ensures smooth operations and scalable growth.</p>
+    </div>
+  </div>
+</section>
+
+<section class="post-property-section">
+  <h2>Have a Property to Rent or Sell?</h2>
+  <p>Post your property on Baribaba and connect with genuine tenants & buyers.</p>
+  <a href="https://forms.gle/3H8EQZ7LEvRFZVQb9" 
+     target="_blank" 
+     class="post-property-btn">
+     Post Property
+  </a>
+</section>
+
 <footer>
   <div class="footer-social">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100087916466794" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/company/baribaba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/918240473982" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
   <p>© 2026 Baribaba. All Rights Reserved.</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918240473982" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<!-- Floating WhatsApp Button -->
+<a class="whatsapp" id="whatsappBtn" href="#">💬</a>
+
+<script>
+  const whatsappBtn = document.getElementById("whatsappBtn");
+  const phone = "918240473982"; // Your WhatsApp number
+  const message = "Hello! I am interested in Baribaba's real estate services.";
+
+  whatsappBtn.onclick = function() {
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+</script>
 
 </body>
 </html>
