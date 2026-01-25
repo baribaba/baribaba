@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ Baribaba Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <title>Baribaba | From Amar To Tomar, Baribaba is Shobar</title>
 
   <!-- Google Font -->
@@ -109,7 +113,7 @@
     .section-title h2 { font-size:36px; margin-bottom:10px; }
     .section-title p { color:#666; }
 
-    /* Grid / Categories */
+    /* Grid */
     .grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -148,7 +152,7 @@
       margin-bottom:15px;
     }
 
-    /* Post Property Section */
+    /* Post Property */
     .post-property-section {
       background:#fff;
       text-align:center;
@@ -205,7 +209,7 @@
       transform:translateY(-4px);
     }
 
-    /* WhatsApp Floating Button */
+    /* WhatsApp Button */
     .whatsapp {
       position:fixed;
       bottom:25px;
@@ -294,13 +298,13 @@
   </div>
   <div class="founders">
     <div class="founder">
-      <img src="assets/images/argha.jpg" alt="Argha Chakraborty" />
+      <img src="assets/images/argha.jpg" alt="Argha Chakraborty">
       <h3>Argha Chakraborty</h3>
       <p><strong>Co-Founder | Vision & Strategy</strong></p>
-      <p>Driven by transparency and trust, Argha leads Baribaba's long-term vision.</p>
+      <p>Driven by transparency and trust, Argha leads Baribaba's vision.</p>
     </div>
     <div class="founder">
-      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik" />
+      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik">
       <h3>Soumik Pramanik</h3>
       <p><strong>Co-Founder | Operations & Growth</strong></p>
       <p>Ensures smooth operations and scalable growth.</p>
@@ -311,10 +315,8 @@
 <section class="post-property-section">
   <h2>Have a Property to Rent or Sell?</h2>
   <p>Post your property on Baribaba and connect with genuine tenants & buyers.</p>
-  <a href="https://forms.gle/3H8EQZ7LEvRFZVQb9" 
-     target="_blank" 
-     class="post-property-btn">
-     Post Property
+  <a href="https://forms.gle/3H8EQZ7LEvRFZVQb9" target="_blank" class="post-property-btn">
+    Post Property
   </a>
 </section>
 
@@ -328,15 +330,14 @@
   <p>© 2026 Baribaba. All Rights Reserved.</p>
 </footer>
 
-<!-- Floating WhatsApp Button -->
 <a class="whatsapp" id="whatsappBtn" href="#">💬</a>
 
 <script>
   const whatsappBtn = document.getElementById("whatsappBtn");
-  const phone = "918240473982"; // Your WhatsApp number
+  const phone = "918240473982";
   const message = "Hello! I am interested in Baribaba's real estate services.";
 
-  whatsappBtn.onclick = function() {
+  whatsappBtn.onclick = function () {
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
