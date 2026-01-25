@@ -78,6 +78,7 @@
       font-weight:600;
       cursor:pointer;
     }
+    .search-box button:hover{background:#b5171c;}
 
     /* Sections */
     section{padding:80px 60px;}
@@ -98,19 +99,12 @@
       box-shadow:0 6px 20px rgba(0,0,0,.08);
       font-weight:600;
     }
-    .card i{
-      font-size:36px;
-      color:#d81f26;
-      margin-bottom:15px;
-    }
 
     /* Founders */
     .founders{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:40px;
-      max-width:1000px;
-      margin:auto;
     }
     .founder{
       background:#fff;
@@ -126,6 +120,23 @@
       object-fit:cover;
       margin-bottom:15px;
     }
+
+    /* Post Property */
+    .post-property-section{
+      background:#fff;
+      text-align:center;
+      padding:90px 30px;
+    }
+    .post-property-btn{
+      background:#d81f26;
+      color:#fff;
+      padding:16px 45px;
+      border-radius:40px;
+      font-size:18px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .post-property-btn:hover{background:#b5171c;}
 
     /* About */
     #about-us{background:#f8f8f8;padding:80px 30px;}
@@ -207,6 +218,7 @@
       justify-content:center;
       font-size:24px;
       text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,.3);
     }
 
     @media(max-width:768px){
@@ -247,77 +259,21 @@
   </div>
 </div>
 
-<!-- PROPERTY CATEGORY -->
-<section>
-  <div class="section-title">
-    <h2>Property Categories</h2>
-    <p>Find the right property for every need</p>
-  </div>
-  <div class="grid">
-    <div class="card"><i class="fas fa-home"></i>Residential</div>
-    <div class="card"><i class="fas fa-building"></i>Commercial</div>
-    <div class="card"><i class="fas fa-store"></i>Shops</div>
-    <div class="card"><i class="fas fa-warehouse"></i>Warehouse</div>
-    <div class="card"><i class="fas fa-city"></i>Plots & Land</div>
-  </div>
-</section>
-
-<!-- FOUNDERS -->
-<section>
-  <div class="section-title">
-    <h2>Founders</h2>
-    <p>The minds behind Baribaba</p>
-  </div>
-  <div class="founders">
-    <div class="founder">
-      <img src="assets/images/argha.jpg">
-      <h3>Argha Chakraborty</h3>
-      <p>Founder & Visionary</p>
-    </div>
-    <div class="founder">
-      <img src="assets/images/soumik.jpg">
-      <h3>Soumik Pramanik</h3>
-      <p>Co-Founder & Operations</p>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
 <section id="about-us">
   <h2>About Us | Baribaba</h2>
   <h3>From Amar to Tomar, Baribaba is Shobar</h3>
   <p>Baribaba is Kolkata’s trusted real estate coordination platform founded by Argha Chakraborty and Soumik Pramanik.</p>
-  <p>We simplify renting, buying, selling, and managing properties by connecting owners, tenants, buyers, and agents through verified listings and transparent coordination.</p>
+  <p>We connect property owners, tenants, buyers, and agents with verified listings and transparent support.</p>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
-  <h2>Frequently Asked Questions</h2>
+  <h2>Baribaba FAQ</h2>
 
-  <div class="faq-item">
-    <div class="faq-question">What is Baribaba? <i class="fas fa-chevron-down"></i></div>
-    <div class="faq-answer">Baribaba is a real estate coordination platform that connects property owners, tenants, buyers, and agents.</div>
-  </div>
+  <!-- FAQ ITEMS -->
+  <div class="faq-item"><div class="faq-question">What is Baribaba? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Baribaba is a modern property coordination platform.</div></div>
+  <div class="faq-item"><div class="faq-question">How does Baribaba work? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We coordinate between owners, agents and customers.</div></div>
+  <div class="faq-item"><div class="faq-question">Is Baribaba free? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Browsing is free. Some premium services may apply.</div></div>
 
-  <div class="faq-item">
-    <div class="faq-question">Is Baribaba a broker? <i class="fas fa-chevron-down"></i></div>
-    <div class="faq-answer">No. Baribaba works as a coordination and support platform to ensure transparency and smooth communication.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">Can I post my property for free? <i class="fas fa-chevron-down"></i></div>
-    <div class="faq-answer">Yes, property posting is free. Premium support services may include charges.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">Which locations do you serve? <i class="fas fa-chevron-down"></i></div>
-    <div class="faq-answer">Currently we focus on Kolkata and nearby regions, expanding soon.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">How can I contact Baribaba? <i class="fas fa-chevron-down"></i></div>
-    <div class="faq-answer">You can contact us via WhatsApp, phone, or email mentioned on the website.</div>
-  </div>
 </section>
 
 <footer>
@@ -333,10 +289,12 @@
 <a class="whatsapp" id="whatsappBtn">💬</a>
 
 <script>
+  // WhatsApp
   document.getElementById("whatsappBtn").onclick = () => {
     window.open("https://wa.me/918240473982?text=Hello%20Baribaba", "_blank");
   };
 
+  // FAQ Toggle
   document.querySelectorAll(".faq-item").forEach(item=>{
     item.onclick=()=>item.classList.toggle("active");
   });
