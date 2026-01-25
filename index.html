@@ -39,22 +39,12 @@
 
     nav a:hover { color:#d81f26; }
 
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
-    .brand-name {
-      font-size:24px;
-      font-weight:700;
-      color:#d81f26;
-    }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .brand-name { font-size:24px; font-weight:700; color:#d81f26; }
 
     /* Hero */
     .hero {
-      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-      url('assets/images/hero.jpg') center/cover no-repeat;
+      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('assets/images/hero.jpg') center/cover no-repeat;
       height:85vh;
       display:flex;
       align-items:center;
@@ -79,12 +69,7 @@
     }
 
     .search-box select,
-    .search-box input {
-      flex:1;
-      padding:14px;
-      border:1px solid #ddd;
-      border-radius:6px;
-    }
+    .search-box input { flex:1; padding:14px; border:1px solid #ddd; border-radius:6px; }
 
     .search-box button {
       background:#d81f26;
@@ -101,11 +86,7 @@
     /* Sections */
     section { padding:80px 60px; }
 
-    .section-title {
-      text-align:center;
-      margin-bottom:50px;
-    }
-
+    .section-title { text-align:center; margin-bottom:50px; }
     .section-title h2 { font-size:36px; margin-bottom:10px; }
     .section-title p { color:#666; }
 
@@ -170,6 +151,16 @@
     }
 
     .post-property-btn:hover { background:#b5171c; }
+
+    /* About Us Section */
+    #about-us {
+      background:#f8f8f8;
+      padding:80px 30px;
+    }
+
+    #about-us h2 { color:#d81f26; font-size:36px; margin-bottom:20px; }
+    #about-us h3 { color:#222; font-size:24px; margin-bottom:30px; }
+    #about-us p { font-size:16px; line-height:1.8; color:#333; margin-bottom:15px; }
 
     /* Footer */
     footer {
@@ -318,6 +309,18 @@
   </a>
 </section>
 
+<!-- About Us Section -->
+<section id="about-us">
+  <div style="max-width:1000px; margin:0 auto; text-align:center;">
+    <h2>About Us | Baribaba</h2>
+    <h3>Baribaba – From Amar to Tomar, Baribaba is Shobar</h3>
+    <p>Baribaba is Kolkata’s trusted real estate coordination platform, founded by Argha Chakraborty and Soumik Pramanik. Our mission is to simplify property transactions by connecting buyers, sellers, and renters directly, eliminating unnecessary intermediaries, and making real estate transparent, efficient, and secure.</p>
+    <p>We offer a wide range of services, including verified residential and commercial property listings, hassle-free buying, selling, and renting, and personalized support for every client. Every property listed on Baribaba is verified, ensuring genuine inquiries and smooth transactions.</p>
+    <p>At Baribaba, we believe a property is more than a space—it’s where life happens, businesses grow, and memories are made. Our platform is designed to save time, reduce stress, and provide a reliable experience for anyone looking to navigate Kolkata’s property market.</p>
+    <p>Whether you are searching for your dream home, planning a property investment, or looking for a rental space, Baribaba is your go-to partner. Join thousands of satisfied clients who trust us for safe, seamless, and smart real estate solutions in Kolkata.</p>
+  </div>
+</section>
+
 <footer>
   <div class="footer-social">
     <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -333,7 +336,7 @@
 
 <script>
   const whatsappBtn = document.getElementById("whatsappBtn");
-  const phone = "918240473982"; // Your WhatsApp number
+  const phone = "918240473982"; 
   const message = "Hello! I am interested in Baribaba's real estate services.";
 
   whatsappBtn.onclick = function() {
