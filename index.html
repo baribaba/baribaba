@@ -82,61 +82,6 @@
 
     /* Sections */
     section{padding:80px 60px;}
-    .section-title{text-align:center;margin-bottom:50px;}
-    .section-title h2{font-size:36px;}
-    .section-title p{color:#666;}
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-    }
-    .card{
-      background:#fff;
-      padding:30px;
-      border-radius:12px;
-      text-align:center;
-      box-shadow:0 6px 20px rgba(0,0,0,.08);
-      font-weight:600;
-    }
-
-    /* Founders */
-    .founders{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:40px;
-    }
-    .founder{
-      background:#fff;
-      padding:30px;
-      border-radius:14px;
-      box-shadow:0 8px 24px rgba(0,0,0,.08);
-      text-align:center;
-    }
-    .founder img{
-      width:130px;
-      height:130px;
-      border-radius:50%;
-      object-fit:cover;
-      margin-bottom:15px;
-    }
-
-    /* Post Property */
-    .post-property-section{
-      background:#fff;
-      text-align:center;
-      padding:90px 30px;
-    }
-    .post-property-btn{
-      background:#d81f26;
-      color:#fff;
-      padding:16px 45px;
-      border-radius:40px;
-      font-size:18px;
-      text-decoration:none;
-      font-weight:600;
-    }
-    .post-property-btn:hover{background:#b5171c;}
 
     /* About */
     #about-us{background:#f8f8f8;padding:80px 30px;}
@@ -262,17 +207,25 @@
 <section id="about-us">
   <h2>About Us | Baribaba</h2>
   <h3>From Amar to Tomar, Baribaba is Shobar</h3>
-  <p>Baribaba is Kolkata’s trusted real estate coordination platform founded by Argha Chakraborty and Soumik Pramanik.</p>
-  <p>We connect property owners, tenants, buyers, and agents with verified listings and transparent support.</p>
+  <p>Baribaba is a modern property coordination platform connecting property owners, buyers, tenants, and agents.</p>
+  <p>Founded by Argha Chakraborty and Soumik Pramanik, we focus on verified listings, transparency, and personalized support.</p>
 </section>
 
 <section id="faq">
   <h2>Baribaba FAQ</h2>
 
-  <!-- FAQ ITEMS -->
-  <div class="faq-item"><div class="faq-question">What is Baribaba? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Baribaba is a modern property coordination platform.</div></div>
-  <div class="faq-item"><div class="faq-question">How does Baribaba work? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We coordinate between owners, agents and customers.</div></div>
-  <div class="faq-item"><div class="faq-question">Is Baribaba free? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Browsing is free. Some premium services may apply.</div></div>
+  <div class="faq-item"><div class="faq-question">1. What is Baribaba? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Baribaba is a modern property coordination platform that connects property seekers and owners seamlessly.</div></div>
+  <div class="faq-item"><div class="faq-question">2. How does Baribaba work? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We coordinate between property owners, agents, and customers to simplify buying, selling, and renting.</div></div>
+  <div class="faq-item"><div class="faq-question">3. Who can use Baribaba? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Anyone looking to buy, sell, or rent property in Kolkata and nearby areas.</div></div>
+  <div class="faq-item"><div class="faq-question">4. Is there a fee to use Baribaba? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Browsing is free. Premium coordination services may include charges.</div></div>
+  <div class="faq-item"><div class="faq-question">5. How can I post my property? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Use the Post Property form and submit your details for quick listing.</div></div>
+  <div class="faq-item"><div class="faq-question">6. How can I contact Baribaba? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Email: help@baribaba.com | Phone: 8240473982 | WhatsApp available.</div></div>
+  <div class="faq-item"><div class="faq-question">7. How fast are properties listed? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Listings are reviewed and published within 24–48 hours.</div></div>
+  <div class="faq-item"><div class="faq-question">8. Is Baribaba only for Kolkata? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Currently yes, with plans to expand soon.</div></div>
+  <div class="faq-item"><div class="faq-question">9. Can Baribaba help with legalities? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We guide and connect users with trusted legal professionals.</div></div>
+  <div class="faq-item"><div class="faq-question">10. Who founded Baribaba? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Founded by Argha Chakraborty and Soumik Pramanik.</div></div>
+  <div class="faq-item"><div class="faq-question">11. What makes Baribaba different? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Human coordination, verified listings, and transparency.</div></div>
+  <div class="faq-item"><div class="faq-question">12. How can I stay updated? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Follow us on social media or connect via WhatsApp.</div></div>
 
 </section>
 
@@ -289,12 +242,10 @@
 <a class="whatsapp" id="whatsappBtn">💬</a>
 
 <script>
-  // WhatsApp
   document.getElementById("whatsappBtn").onclick = () => {
     window.open("https://wa.me/918240473982?text=Hello%20Baribaba", "_blank");
   };
 
-  // FAQ Toggle
   document.querySelectorAll(".faq-item").forEach(item=>{
     item.onclick=()=>item.classList.toggle("active");
   });
