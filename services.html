@@ -5,36 +5,203 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baribaba Services | Rent • Buy • Sell</title>
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-    body { background:#f6f6f6; color:#222; }
+    :root{
+      --brand:#d81f26;
+      --brand-dark:#b5171c;
+    }
 
-    header { background:#fff; padding:16px 60px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 10px rgba(0,0,0,.06); }
-    header img { height:40px; }
-    nav a { margin-left:25px; text-decoration:none; color:#222; font-weight:500; }
-    nav a:hover { color:#d81f26; }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+    body{background:#f6f6f6;color:#222;}
 
-    .hero { background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('assets/images/hero.jpg') center/cover no-repeat; padding:90px 60px; color:#fff; text-align:center; }
-    .hero h1 { font-size:42px; margin-bottom:10px; }
-    .hero p { font-size:18px; }
+    header{
+      background:#fff;
+      padding:16px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.06);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
 
-    section { padding:80px 60px; }
-    .section-title { text-align:center; margin-bottom:50px; }
-    .section-title h2 { font-size:36px; margin-bottom:8px; }
-    .section-title p { color:#666; }
+    header img{height:45px;}
 
-    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; }
-    .card { background:#fff; padding:30px; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.08); }
-    .card h3 { margin-bottom:10px; }
-    .card span { display:inline-block; background:#d81f26; color:#fff; padding:4px 12px; border-radius:20px; font-size:12px; margin-bottom:12px; }
+    nav a{
+      margin-left:25px;
+      text-decoration:none;
+      color:#222;
+      font-weight:500;
+      transition:.3s;
+    }
 
-    footer { background:#111; color:#aaa; text-align:center; padding:35px; }
+    nav a:hover{color:var(--brand);}
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url('assets/images/hero.jpg') center/cover no-repeat;
+      padding:100px 60px;
+      color:#fff;
+      text-align:center;
+    }
+
+    .hero h1{font-size:42px;margin-bottom:10px;}
+    .hero p{font-size:18px;}
+
+    section{padding:80px 60px;}
+
+    .section-title{text-align:center;margin-bottom:50px;}
+    .section-title h2{
+      font-size:36px;
+      margin-bottom:8px;
+      color:var(--brand);
+    }
+    .section-title p{color:#666;}
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#fff;
+      padding:35px;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card span{
+      display:inline-block;
+      background:var(--brand);
+      color:#fff;
+      padding:6px 14px;
+      border-radius:30px;
+      font-size:12px;
+      margin-bottom:15px;
+      font-weight:600;
+    }
+
+    .card h3{
+      margin-bottom:12px;
+      font-size:20px;
+    }
+
+    .card p{
+      color:#555;
+      line-height:1.6;
+    }
+
+    /* Why Choose Section */
+    .why{
+      background:#fff;
+      text-align:center;
+    }
+
+    .why ul{
+      max-width:800px;
+      margin:30px auto 0;
+      list-style:none;
+      line-height:2;
+      font-weight:500;
+    }
+
+    .why li{
+      margin-bottom:10px;
+    }
+
+    /* CTA Section */
+    .cta{
+      background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+      color:#fff;
+      text-align:center;
+      padding:80px 30px;
+    }
+
+    .cta h2{font-size:34px;margin-bottom:15px;}
+    .cta p{margin-bottom:30px;}
+
+    .cta a{
+      background:#fff;
+      color:var(--brand);
+      padding:14px 35px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .cta a:hover{
+      background:#f2f2f2;
+      transform:scale(1.05);
+    }
+
+    footer{
+      background:#111;
+      color:#aaa;
+      text-align:center;
+      padding:40px;
+    }
+
+    .footer-social{
+      margin-bottom:20px;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+    }
+
+    .footer-social a{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      background:#1f1f1f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:18px;
+      transition:.3s;
+      text-decoration:none;
+    }
+
+    .footer-social a:hover{
+      background:var(--brand);
+      transform:translateY(-4px);
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background:#25D366;
+      color:white;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.3);
+      z-index:2000;
+      text-decoration:none;
+    }
 
     @media(max-width:768px){
-      header, section, .hero { padding:40px 25px; }
-      .hero h1 { font-size:32px; }
+      header, section, .hero{padding:40px 25px;}
+      .hero h1{font-size:30px;}
     }
   </style>
 </head>
@@ -53,30 +220,30 @@
 
 <div class="hero">
   <h1>Our Services</h1>
-  <p>Complete real estate solutions for everyone</p>
+  <p>Complete real estate solutions — Rent • Buy • Sell • Manage</p>
 </div>
 
 <section>
   <div class="section-title">
     <h2>Rent Services</h2>
-    <p>Easy, fast & transparent rentals</p>
+    <p>Easy, fast & 100% broker-free rentals</p>
   </div>
   <div class="services">
-    <div class="card"><span>Rent</span><h3>Homes & Flats</h3><p>Find affordable and verified flats and houses for rent.</p></div>
+    <div class="card"><span>Rent</span><h3>Homes & Flats</h3><p>Verified flats and houses with transparent communication.</p></div>
     <div class="card"><span>Rent</span><h3>Rooms & PG</h3><p>Perfect options for students and working professionals.</p></div>
-    <div class="card"><span>Rent</span><h3>Commercial Spaces</h3><p>Office spaces, shops, and business locations.</p></div>
+    <div class="card"><span>Rent</span><h3>Commercial Spaces</h3><p>Office spaces, shops & business-ready properties.</p></div>
   </div>
 </section>
 
 <section style="background:#fff;">
   <div class="section-title">
     <h2>Buy Services</h2>
-    <p>Invest smart with Baribaba</p>
+    <p>Invest smart with verified properties</p>
   </div>
   <div class="services">
-    <div class="card"><span>Buy</span><h3>Residential Property</h3><p>Buy flats, houses, and buildings with confidence.</p></div>
-    <div class="card"><span>Buy</span><h3>Plots & Land</h3><p>Verified land and plot deals with full transparency.</p></div>
-    <div class="card"><span>Buy</span><h3>Commercial Assets</h3><p>Shops, malls, offices for business growth.</p></div>
+    <div class="card"><span>Buy</span><h3>Residential Property</h3><p>Buy flats, houses & buildings with full transparency.</p></div>
+    <div class="card"><span>Buy</span><h3>Plots & Land</h3><p>Verified land deals with clear documentation.</p></div>
+    <div class="card"><span>Buy</span><h3>Commercial Assets</h3><p>Grow your business with prime commercial spaces.</p></div>
   </div>
 </section>
 
@@ -86,10 +253,29 @@
     <p>Sell faster with expert support</p>
   </div>
   <div class="services">
-    <div class="card"><span>Sell</span><h3>Property Listing</h3><p>Professional listings to attract genuine buyers.</p></div>
-    <div class="card"><span>Sell</span><h3>Market Analysis</h3><p>Right pricing based on market trends.</p></div>
-    <div class="card"><span>Sell</span><h3>End-to-End Support</h3><p>From listing to final deal closure.</p></div>
+    <div class="card"><span>Sell</span><h3>Property Listing</h3><p>Professional listings that attract genuine buyers.</p></div>
+    <div class="card"><span>Sell</span><h3>Market Analysis</h3><p>Accurate pricing based on real-time market trends.</p></div>
+    <div class="card"><span>Sell</span><h3>End-to-End Support</h3><p>From listing to final deal closure — full assistance.</p></div>
   </div>
+</section>
+
+<section class="why">
+  <div class="section-title">
+    <h2>Why Choose Baribaba?</h2>
+  </div>
+  <ul>
+    <li>✔ 100% Broker-Free Model</li>
+    <li>✔ Verified Property Listings</li>
+    <li>✔ Transparent Communication</li>
+    <li>✔ Bilingual Support (English & Bengali)</li>
+    <li>✔ Fast WhatsApp Response</li>
+  </ul>
+</section>
+
+<section class="cta">
+  <h2>Have a Property to Rent or Sell?</h2>
+  <p>Post your property today and connect with genuine buyers & tenants.</p>
+  <a href="https://forms.gle/3H8EQZ7LEvRFZVQb9" target="_blank">Post Property</a>
 </section>
 
 <footer>
@@ -97,10 +283,15 @@
     <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com/profile.php?id=100087916466794" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="https://www.linkedin.com/company/baribaba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://wa.me/918240473982" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
   <p>© 2026 Baribaba. All Rights Reserved.</p>
 </footer>
+
+<a class="whatsapp-float" 
+   href="https://wa.me/918240473982?text=Hello! I am interested in Baribaba services." 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
