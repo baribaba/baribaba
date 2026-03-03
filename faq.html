@@ -4,219 +4,173 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ | Baribaba</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-body{
-background:#f7f7f7;
-color:#222;
-}
-
-/* NAVBAR */
-header{
-background:#fff;
-padding:16px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.06);
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
-}
-
-header img{
-height:40px;
-}
-
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:#222;
-font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-color:#d81f26;
-}
-
-/* HERO */
-.hero{
-margin-top:80px;
-height:250px;
-background:#d81f26;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-text-align:center;
-}
-
-.hero h1{
-font-size:36px;
-}
-
-/* FAQ SECTION */
-.container{
-max-width:900px;
-margin:60px auto;
-padding:0 25px;
-}
-
-.faq-item{
-background:#fff;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.05);
-overflow:hidden;
-}
-
-.faq-question{
-padding:18px 20px;
-cursor:pointer;
-font-weight:600;
-position:relative;
-}
-
-.faq-question::after{
-content:"+";
-position:absolute;
-right:20px;
-font-size:22px;
-transition:.3s;
-}
-
-.faq-item.active .faq-question::after{
-content:"-";
-}
-
-.faq-answer{
-max-height:0;
-overflow:hidden;
-padding:0 20px;
-color:#555;
-line-height:1.6;
-transition:max-height .4s ease, padding .3s ease;
-}
-
-.faq-item.active .faq-answer{
-max-height:300px;
-padding:15px 20px 20px;
-}
-
-/* FOOTER */
-footer{
-background:#111;
-color:#aaa;
-text-align:center;
-padding:35px;
-margin-top:60px;
-}
-
-@media(max-width:768px){
-header{
-padding:16px 25px;
-}
-nav a{
-margin-left:12px;
-font-size:14px;
-}
-.hero h1{
-font-size:26px;
-}
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico">
 </head>
 
 <body>
 
-<header>
-<img src="assets/images/logo.png" alt="Baribaba Logo">
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="find-property.html">Find Property</a>
-<a href="list-property.html">List Property</a>
-<a href="partnership.html">Partnership</a>
-<a href="testimonials.html">Testimonials</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact Us</a>
-</nav>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo">
+        <img src="assets/images/logo.png" alt="Baribaba Logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about-founder.html">About Us</a>
+        <a href="search.html">Find Property</a>
+        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">List Property</a>
+        <a href="partnership.html">Partnership</a>
+        <a href="reviews.html">Testimonials</a>
+        <a class="active" href="faq.html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
 </header>
 
-<div class="hero">
-<h1>Frequently Asked Questions</h1>
-</div>
+<!-- ================= HERO ================= -->
+<section class="hero" style="height:50vh;">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about Baribaba</p>
+    </div>
+</section>
 
-<div class="container">
+<!-- ================= FAQ SECTION ================= -->
+<section>
 
+<h2>Common Questions</h2>
+
+<div class="faq-container">
+
+<!-- FAQ 1 -->
 <div class="faq-item">
-<div class="faq-question">Do I need to pay brokerage to find a property through Baribaba?</div>
-<div class="faq-answer">
-No heavy brokerage! Baribaba focuses on connecting tenants and owners directly to reduce unnecessary middlemen charges.
-</div>
+  <div class="faq-question">
+    1. What is Baribaba?
+  </div>
+  <div class="faq-answer">
+    Baribaba is a broker-free room and flat finding platform in Kolkata that helps tenants connect directly with property owners. We provide verified rental listings without charging heavy brokerage fees.
+  </div>
 </div>
 
+<!-- FAQ 2 -->
 <div class="faq-item">
-<div class="faq-question">How can I list my property on Baribaba?</div>
-<div class="faq-answer">
-Go to the "List Property" page, fill out the property details form, and submit. Our team will review and publish it.
-</div>
+  <div class="faq-question">
+    2. Is Baribaba completely broker-free?
+  </div>
+  <div class="faq-answer">
+    Yes. Baribaba focuses on a broker-free rental model where tenants can find rooms and flats without paying traditional one-month brokerage charges.
+  </div>
 </div>
 
+<!-- FAQ 3 -->
 <div class="faq-item">
-<div class="faq-question">Is Baribaba available only in Kolkata?</div>
-<div class="faq-answer">
-Currently, we are focused on Kolkata and nearby areas. Expansion to other cities is planned soon.
-</div>
+  <div class="faq-question">
+    3. How does Baribaba verify rental listings?
+  </div>
+  <div class="faq-answer">
+    We aim to provide verified room and flat listings by checking property details before publishing. This helps reduce fake listings and improves transparency for tenants.
+  </div>
 </div>
 
+<!-- FAQ 4 -->
 <div class="faq-item">
-<div class="faq-question">How can I contact the property owner?</div>
-<div class="faq-answer">
-You can directly call or message the owner via the WhatsApp button available on each property page.
-</div>
+  <div class="faq-question">
+    4. What types of properties are available on Baribaba?
+  </div>
+  <div class="faq-answer">
+    You can find single rooms, shared rooms, PG accommodations, 1BHK, 2BHK & family flats — all focused within Kolkata’s rental market.
+  </div>
 </div>
 
+<!-- FAQ 5 -->
 <div class="faq-item">
-<div class="faq-question">Is my personal information safe?</div>
-<div class="faq-answer">
-Yes. We respect your privacy and do not share your personal information without consent.
-</div>
+  <div class="faq-question">
+    5. Is Baribaba only available in Kolkata?
+  </div>
+  <div class="faq-answer">
+    Currently, Baribaba primarily operates in Kolkata. Our goal is to expand to other major cities in India in the future.
+  </div>
 </div>
 
+<!-- FAQ 6 -->
 <div class="faq-item">
-<div class="faq-question">How quickly will I receive responses to my inquiry?</div>
-<div class="faq-answer">
-Most owners respond within a few hours. However, response time may vary depending on availability.
+  <div class="faq-question">
+    6. Do tenants have to pay any hidden charges?
+  </div>
+  <div class="faq-answer">
+    No. Baribaba believes in transparency. We do not promote hidden brokerage fees or surprise commissions.
+  </div>
 </div>
+
+<!-- FAQ 7 -->
+<div class="faq-item">
+  <div class="faq-question">
+    7. How can property owners list their property on Baribaba?
+  </div>
+  <div class="faq-answer">
+    Property owners can collaborate with Baribaba by submitting their property details through our listing process. Once reviewed, the property can be added to our platform for tenant visibility.
+  </div>
+</div>
+
+<!-- FAQ 8 -->
+<div class="faq-item">
+  <div class="faq-question">
+    8. Is Baribaba safe for students moving to Kolkata?
+  </div>
+  <div class="faq-answer">
+    Yes. Baribaba is designed especially to help students and working professionals find verified rooms and PG accommodations without brokerage pressure.
+  </div>
+</div>
+
+<!-- FAQ 9 -->
+<div class="faq-item">
+  <div class="faq-question">
+    9. How is Baribaba different from traditional brokers?
+  </div>
+  <div class="faq-answer">
+    Traditional brokers usually charge one month’s rent as commission. Baribaba reduces dependency on middlemen by enabling direct communication between tenants and owners through a transparent system.
+  </div>
+</div>
+
+<!-- FAQ 10 -->
+<div class="faq-item">
+  <div class="faq-question">
+    10. How can I contact Baribaba for support?
+  </div>
+  <div class="faq-answer">
+    Website: www.baribaba.com<br>
+    Email: help@baribaba.com<br>
+    Phone/WhatsApp: +91 8240473982
+  </div>
 </div>
 
 </div>
 
-<footer>
-<p>© 2026 Baribaba. All Rights Reserved.</p>
-</footer>
+</section>
 
-<script>
-const faqItems = document.querySelectorAll(".faq-item");
+<!-- ================= CTA ================= -->
+<section style="text-align:center;">
 
-faqItems.forEach(item => {
-item.querySelector(".faq-question").addEventListener("click", () => {
-item.classList.toggle("active");
-});
-});
-</script>
+<h2>Still Have Questions?</h2>
+<p>Our team is ready to help you anytime.</p>
+<br>
+
+<a href="https://wa.me/918240473982?text=Hello%20Baribaba%2C%20I%20have%20a%20question.">
+  <button class="post-btn">Chat on WhatsApp</button>
+</a>
+
+</section>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/918240473982?text=Hello%20Baribaba%2C%20I%20have%20a%20question."
+   class="whatsapp-float"
+   target="_blank">
+   💬
+</a>
+
+<script src="script.js"></script>
 
 </body>
 </html>
