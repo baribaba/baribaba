@@ -1,347 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baribaba | From Amar To Tomar, Baribaba is Shobar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Baribaba | From Amar To Tomar, Baribaba is Shobar</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-    body { background:#f7f7f7; color:#222; }
+<style>
 
-    /* Navbar */
-    header {
-      background:#fff;
-      padding:16px 60px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      box-shadow:0 2px 10px rgba(0,0,0,.06);
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#f7f7f7;color:#222}
 
-    header img { height:45px; }
+/* NAVBAR */
+header{
+background:#fff;
+padding:16px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.06);
+position:sticky;
+top:0;
+z-index:100;
+}
 
-    nav a {
-      margin-left:25px;
-      text-decoration:none;
-      color:#222;
-      font-weight:500;
-    }
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:45px}
+.brand-name{font-size:24px;font-weight:700;color:#d81f26}
 
-    nav a:hover { color:#d81f26; }
+nav a{
+margin-left:22px;
+text-decoration:none;
+color:#222;
+font-weight:500;
+}
+nav a:hover{color:#d81f26}
 
-    .brand { display:flex; align-items:center; gap:12px; }
-    .brand-name { font-size:24px; font-weight:700; color:#d81f26; }
+/* HERO */
+.hero{
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('assets/images/hero.jpg') center/cover no-repeat;
+height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+}
 
-    /* Hero */
-    .hero {
-      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('assets/images/hero.jpg') center/cover no-repeat;
-      height:85vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#fff;
-      padding:20px;
-    }
+.hero h1{font-size:48px;margin-bottom:10px}
+.hero p{margin-bottom:30px}
 
-    .hero h1 { font-size:48px; margin-bottom:10px; }
-    .hero p { font-size:18px; margin-bottom:30px; }
+/* SEARCH */
+.search-box{
+background:#fff;
+padding:20px;
+border-radius:10px;
+display:flex;
+gap:10px;
+max-width:900px;
+margin:auto;
+}
 
-    /* Search Box */
-    .search-box {
-      background:#fff;
-      padding:20px;
-      border-radius:10px;
-      display:flex;
-      gap:10px;
-      max-width:900px;
-      width:100%;
-      margin:0 auto;
-    }
+.search-box input,
+.search-box select{
+flex:1;
+padding:14px;
+border:1px solid #ddd;
+border-radius:6px;
+}
 
-    .search-box select,
-    .search-box input { flex:1; padding:14px; border:1px solid #ddd; border-radius:6px; }
+.search-box button{
+background:#d81f26;
+color:#fff;
+border:none;
+padding:14px 30px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+}
 
-    .search-box button {
-      background:#d81f26;
-      color:#fff;
-      border:none;
-      padding:14px 30px;
-      border-radius:6px;
-      cursor:pointer;
-      font-weight:600;
-    }
+/* SECTION */
+section{padding:80px 60px}
 
-    .search-box button:hover { background:#b5171c; }
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:36px;color:#d81f26}
 
-    /* Sections */
-    section { padding:80px 60px; }
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 
-    .section-title { text-align:center; margin-bottom:50px; }
-    .section-title h2 { font-size:36px; margin-bottom:10px; }
-    .section-title p { color:#666; }
+.card{
+background:#fff;
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+font-weight:600;
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-6px);
+}
 
-    /* Grid / Categories */
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-    }
+/* POST PROPERTY */
+.post-property-section{
+background:#fff;
+text-align:center;
+}
 
-    .card {
-      background:#fff;
-      padding:30px;
-      border-radius:12px;
-      text-align:center;
-      box-shadow:0 6px 20px rgba(0,0,0,.08);
-      font-weight:600;
-    }
+.post-property-btn{
+background:#d81f26;
+color:#fff;
+padding:16px 45px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
 
-    /* Founders */
-    .founders {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:40px;
-    }
+/* TESTIMONIAL SCROLL */
+.review-scroll{
+display:flex;
+gap:25px;
+animation:scroll 25s linear infinite;
+}
+.review-scroll img{
+height:220px;
+border-radius:10px;
+}
 
-    .founder {
-      background:#fff;
-      padding:30px;
-      border-radius:14px;
-      box-shadow:0 8px 24px rgba(0,0,0,.08);
-      text-align:center;
-    }
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
 
-    .founder img {
-      width:130px;
-      height:130px;
-      border-radius:50%;
-      object-fit:cover;
-      margin-bottom:15px;
-    }
+/* FOOTER */
+footer{
+background:#111;
+color:#aaa;
+padding:40px;
+text-align:center;
+}
 
-    /* Post Property Section */
-    .post-property-section {
-      background:#fff;
-      text-align:center;
-      padding:90px 30px;
-    }
+.footer-social{
+display:flex;
+justify-content:center;
+gap:18px;
+margin-bottom:20px;
+}
 
-    .post-property-section h2 { font-size:38px; margin-bottom:15px; }
-    .post-property-section p { color:#666; font-size:18px; margin-bottom:35px; }
+.footer-social a{
+width:42px;height:42px;
+background:#1f1f1f;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+text-decoration:none;
+}
 
-    .post-property-btn {
-      background:#d81f26;
-      color:#fff;
-      padding:16px 45px;
-      border-radius:40px;
-      font-size:18px;
-      font-weight:600;
-      text-decoration:none;
-      box-shadow:0 8px 20px rgba(0,0,0,.2);
-    }
+.footer-social a:hover{
+background:#d81f26;
+}
 
-    .post-property-btn:hover { background:#b5171c; }
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25d366;
+color:#fff;
+padding:16px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 4px 15px rgba(0,0,0,.3);
+}
 
-    /* Short About Us Section */
-    #about-us {
-      background:#f8f8f8;
-      padding:80px 30px;
-    }
+@media(max-width:768px){
+header{padding:16px 25px}
+section{padding:60px 25px}
+.search-box{flex-direction:column}
+.hero h1{font-size:32px}
+}
 
-    #about-us h2 { color:#d81f26; font-size:36px; margin-bottom:20px; text-align:center; }
-    #about-us h3 { color:#222; font-size:24px; margin-bottom:30px; text-align:center; }
-    #about-us p { font-size:16px; line-height:1.8; color:#333; margin-bottom:15px; max-width:900px; margin-left:auto; margin-right:auto; text-align:center; }
-
-    /* Footer */
-    footer {
-      background:#111;
-      color:#aaa;
-      padding:40px 60px;
-      text-align:center;
-    }
-
-    .footer-social {
-      margin-bottom:20px;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-    }
-
-    .footer-social a {
-      width:42px;
-      height:42px;
-      border-radius:50%;
-      background:#1f1f1f;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-size:18px;
-      transition:.3s;
-      text-decoration:none;
-    }
-
-    .footer-social a:hover {
-      background:#d81f26;
-      transform:translateY(-4px);
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp {
-      position:fixed;
-      bottom:25px;
-      right:25px;
-      background:#25d366;
-      color:#fff;
-      padding:15px 18px;
-      border-radius:50%;
-      font-size:22px;
-      text-decoration:none;
-      box-shadow:0 4px 15px rgba(0,0,0,.3);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    @media(max-width:768px){
-      header { padding:16px 25px; }
-      section { padding:60px 25px; }
-      .hero h1 { font-size:34px; }
-      .search-box { flex-direction:column; }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="brand">
-    <img src="assets/images/logo.png" alt="Baribaba Logo" />
-    <span class="brand-name">Baribaba</span>
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="management.html">Management</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <div>
-    <h1>From Amar To Tomar, Baribaba is Shobar</h1>
-    <p>Rent • Buy • Sell • Manage — All Real Estate Solutions in One Place</p>
-
-    <form class="search-box" action="search.html" method="GET">
-      <input type="text" name="location" placeholder="Enter Location" />
-      <select name="type">
-        <option value="">Property Type</option>
-        <option>Rent</option>
-        <option>Buy</option>
-      </select>
-      <select name="category">
-        <option value="">Category</option>
-        <option>Flat</option>
-        <option>Room / PG</option>
-        <option>House</option>
-        <option>Office</option>
-        <option>Commercial</option>
-      </select>
-      <button type="submit">Search</button>
-    </form>
-  </div>
+<div class="brand">
+<img src="assets/images/logo.png">
+<span class="brand-name">Baribaba</span>
 </div>
 
+<nav>
+<a href="index.html">Home</a>
+<a href="about-founder.html">About Us</a>
+<a href="search.html">Find Property</a>
+<a href="services.html">List Property</a>
+<a href="management.html">Partnership</a>
+<a href="reviews.html">Testimonials</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>From Amar To Tomar, Baribaba is Shobar</h1>
+<p>Broker-Free Property Solutions in Kolkata</p>
+
+<form class="search-box" action="search.html">
+<input type="text" placeholder="Location">
+<select>
+<option>Rent</option>
+<option>Buy</option>
+<option>Commercial</option>
+<option>Plot</option>
+</select>
+<select>
+<option>Room</option>
+<option>Flat</option>
+<option>PG</option>
+<option>Commercial</option>
+<option>Plot</option>
+</select>
+<button>Search</button>
+</form>
+
+</div>
+</div>
+
+<!-- SERVICES -->
 <section>
-  <div class="section-title">
-    <h2>Property Categories</h2>
-    <p>Everything you need, all in one place</p>
-  </div>
-  <div class="grid">
-    <div class="card">Flats</div>
-    <div class="card">Rooms & PG</div>
-    <div class="card">Houses</div>
-    <div class="card">Office Spaces</div>
-    <div class="card">Commercial</div>
-    <div class="card">Plots</div>
-  </div>
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="grid">
+<div class="card">Room for Rent</div>
+<div class="card">PG</div>
+<div class="card">Flats</div>
+<div class="card">Commercial Space</div>
+<div class="card">Plot / Land</div>
+<div class="card">Packers & Movers</div>
+<div class="card">Room Interior</div>
+</div>
 </section>
 
-<section>
-  <div class="section-title">
-    <h2>Our Founders</h2>
-    <p>The people behind Baribaba</p>
-  </div>
-  <div class="founders">
-    <div class="founder">
-      <img src="assets/images/argha.jpg" alt="Argha Chakraborty" />
-      <h3>Argha Chakraborty</h3>
-      <p><strong>Co-Founder | Vision & Strategy</strong></p>
-      <p>Driven by transparency and trust, Argha leads Baribaba's long-term vision.</p>
-    </div>
-    <div class="founder">
-      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik" />
-      <h3>Soumik Pramanik</h3>
-      <p><strong>Co-Founder | Operations & Growth</strong></p>
-      <p>Ensures smooth operations and scalable growth.</p>
-    </div>
-  </div>
+<!-- WHY BARIBABA -->
+<section style="background:#fff">
+<div class="section-title">
+<h2>Why Use Baribaba</h2>
+</div>
+
+<div class="grid">
+<div class="card">Broker-Free</div>
+<div class="card">Free Listing</div>
+<div class="card">Verified Properties</div>
+<div class="card">Easy Shortlisting</div>
+<div class="card">Visit Coordination</div>
+<div class="card">Rental Support</div>
+<div class="card">Direct Owner Connect</div>
+<div class="card">All Property Solutions</div>
+</div>
 </section>
 
+<!-- HOW WORKS -->
+<section>
+<div class="section-title">
+<h2>How Baribaba Works</h2>
+</div>
+
+<div class="grid">
+<div class="card">Search Property</div>
+<div class="card">Share Requirement</div>
+<div class="card">Get Listings</div>
+<div class="card">Schedule Visit</div>
+<div class="card">Owner Connection</div>
+<div class="card">Site Visit</div>
+<div class="card">Finalize Property</div>
+<div class="card">Move Easily</div>
+</div>
+</section>
+
+<!-- IMPACT -->
+<section style="background:#fff">
+<div class="section-title">
+<h2>Our Growing Impact</h2>
+</div>
+
+<div class="grid">
+<div class="card">500+ Properties</div>
+<div class="card">300+ Customers</div>
+<div class="card">500+ Owners</div>
+<div class="card">200+ Visits Monthly</div>
+<div class="card">37+ Areas</div>
+<div class="card">300+ Listings</div>
+<div class="card">150+ Move-ins</div>
+<div class="card">₹10L+ Brokerage Saved</div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section>
+<div class="section-title">
+<h2>What Our Customers Say</h2>
+</div>
+
+<div style="overflow:hidden">
+<div class="review-scroll">
+<img src="assets/images/review1.jpg">
+<img src="assets/images/review2.jpg">
+<img src="assets/images/review3.jpg">
+</div>
+</div>
+</section>
+
+<!-- POST PROPERTY -->
 <section class="post-property-section">
-  <h2>Have a Property to Rent or Sell?</h2>
-  <p>Post your property on Baribaba and connect with genuine tenants & buyers.</p>
-  <a href="https://forms.gle/3H8EQZ7LEvRFZVQb9" 
-     target="_blank" 
-     class="post-property-btn">
-     Post Property
-  </a>
+<h2>Have a Property?</h2>
+<p>Post your property & connect directly with tenants.</p>
+
+<a href="https://forms.gle/3H8EQZ7LEvRFZVQb9"
+target="_blank"
+class="post-property-btn">
+Post Property
+</a>
 </section>
 
-<!-- Short About Us Section -->
-<section id="about-us">
-  <div>
-    <h2>About Us | Baribaba</h2>
-    <h3>From Amar to Tomar, Baribaba is Shobar</h3>
-    <p>Baribaba is Kolkata’s trusted real estate platform, founded by Argha Chakraborty and Soumik Pramanik. We simplify property buying, selling, and renting by connecting clients directly, making every transaction secure and hassle-free.</p>
-    <p>Our verified listings, personalized support, and transparent processes ensure a smooth experience for buyers, sellers, and renters alike. With Baribaba, finding or listing your property is fast, safe, and reliable.</p>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <div class="footer-social">
-    <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/profile.php?id=100087916466794" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.linkedin.com/company/baribaba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://wa.me/918240473982" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  <p>© 2026 Baribaba. All Rights Reserved.</p>
+
+<div class="footer-social">
+<a href="https://www.instagram.com/bari_baba__/"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/profile.php?id=100087916466794"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.linkedin.com/company/baribaba/"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+<p>© 2025-26 Baribaba. All Rights Reserved.</p>
+
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a class="whatsapp" id="whatsappBtn" href="#">💬</a>
+<a class="whatsapp" id="whatsappBtn">💬</a>
 
 <script>
-  const whatsappBtn = document.getElementById("whatsappBtn");
-  const phone = "918240473982"; 
-  const message = "Hello! I am interested in Baribaba's real estate services.";
-
-  whatsappBtn.onclick = function() {
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  };
+document.getElementById("whatsappBtn").onclick=function(){
+window.open(
+"https://wa.me/918240473982?text="+
+encodeURIComponent("Hello Baribaba, I am looking for a property. Please assist me."),
+"_blank");
+};
 </script>
 
 </body>
