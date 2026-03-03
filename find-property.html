@@ -4,255 +4,149 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Find Property | Baribaba</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-body{background:#f7f7f7;color:#222;}
-header{background:#fff;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.06);position:fixed;width:100%;top:0;z-index:1000;}
-header img{height:40px;}
-nav a{margin-left:25px;text-decoration:none;color:#222;font-weight:500;transition:.3s;}
-nav a:hover{color:#d81f26;}
-
-.hero{
-margin-top:80px;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), 
-url('assets/images/hero.jpg') center/cover no-repeat;
-padding:120px 60px;
-color:#fff;
-text-align:center;
-}
-
-.search-section{
-background:#fff;
-padding:40px;
-border-radius:16px;
-max-width:1100px;
-margin:-50px auto 60px;
-box-shadow:0 15px 40px rgba(0,0,0,.1);
-}
-
-.search-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
-
-.search-grid input,
-.search-grid select{
-padding:12px;
-border-radius:8px;
-border:1px solid #ddd;
-}
-
-.search-btn{
-background:#d81f26;
-color:#fff;
-border:none;
-padding:14px;
-border-radius:8px;
-cursor:pointer;
-font-weight:600;
-}
-
-.filters{text-align:center;margin-bottom:40px;}
-.filters button{
-margin:8px;
-padding:10px 20px;
-border:none;
-border-radius:30px;
-background:#eee;
-cursor:pointer;
-}
-.filters button.active,
-.filters button:hover{
-background:#d81f26;
-color:#fff;
-}
-
-.properties{
-max-width:1200px;
-margin:auto;
-padding:0 60px 80px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.property-card{
-background:#fff;
-border-radius:16px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.4s;
-}
-
-.property-card:hover{transform:translateY(-8px);}
-
-.property-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.property-info{padding:20px;}
-.property-info h3{margin-bottom:8px;}
-.property-info p{font-size:14px;color:#666;margin-bottom:10px;}
-.price{font-weight:700;color:#d81f26;margin-bottom:10px;}
-.view-btn{
-display:inline-block;
-padding:8px 16px;
-background:#d81f26;
-color:#fff;
-border-radius:6px;
-text-decoration:none;
-font-size:14px;
-}
-
-.hidden{display:none;}
-
-footer{background:#111;color:#aaa;text-align:center;padding:35px;}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<img src="assets/images/logo.png" alt="Baribaba Logo">
+<header class="navbar">
+<div class="logo">Baribaba</div>
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About Us</a>
 <a href="find-property.html">Find Property</a>
 <a href="list-property.html">List Property</a>
-<a href="partnership.html">Partnership</a>
+<a href="collaboration.html">Partnership</a>
 <a href="testimonials.html">Testimonials</a>
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact Us</a>
 </nav>
 </header>
 
-<div class="hero">
+<section class="page-hero">
 <h1>Find Your Perfect Property</h1>
-<p>Rooms • Flats • PG • Plots • Commercial Spaces</p>
-</div>
+</section>
 
-<div class="search-section">
-<div class="search-grid">
-<input type="text" id="locationInput" placeholder="Location">
-<select id="typeSelect">
-<option value="">Property Type</option>
-<option value="flat">Flat</option>
-<option value="pg">PG</option>
-<option value="plot">Plot</option>
+<!-- FILTER SECTION -->
+<section class="filter-section">
+
+<input type="text" id="searchInput" placeholder="Search by location or keyword">
+
+<select id="typeFilter">
+<option value="">Rent / Buy / Commercial / Plot</option>
+<option value="rent">Rent</option>
+<option value="buy">Buy</option>
 <option value="commercial">Commercial</option>
+<option value="plot">Plot</option>
 </select>
-<select id="budgetSelect">
-<option value="">Budget</option>
-<option value="10000">Below ₹10,000</option>
-<option value="25000">₹10,000 - ₹25,000</option>
-<option value="50000">₹25,000+</option>
+
+<select id="categoryFilter">
+<option value="">Room / Flat / PG / Plot</option>
+<option value="room">Room</option>
+<option value="pg">PG</option>
+<option value="flat">Flat</option>
+<option value="commercial">Commercial</option>
+<option value="plot">Plot</option>
 </select>
-<button class="search-btn" onclick="filterProperties()">Search Property</button>
-</div>
-</div>
 
-<div class="filters">
-<button onclick="setCategory('all')" class="active">All</button>
-<button onclick="setCategory('rent')">Rent</button>
-<button onclick="setCategory('buy')">Buy</button>
-<button onclick="setCategory('commercial')">Commercial</button>
-</div>
+<select id="locationFilter">
+<option value="">Location</option>
+<option value="saltlake">Salt Lake</option>
+<option value="newtown">New Town</option>
+<option value="garia">Garia</option>
+<option value="dumdum">Dum Dum</option>
+</select>
 
-<div class="properties" id="propertyContainer">
+<input type="number" id="budgetFilter" placeholder="Max Budget">
 
-<div class="property-card" data-category="rent" data-type="flat" data-price="18000" data-location="salt lake">
+<button onclick="filterProperties()">Search</button>
+
+</section>
+
+<!-- PROPERTY LISTINGS -->
+<section class="property-container" id="propertyContainer">
+
+<!-- PROPERTY CARD -->
+<div class="property-card"
+data-type="rent"
+data-category="flat"
+data-location="saltlake"
+data-price="18000">
+
+<div class="property-images">
 <img src="assets/images/property1.jpg">
-<div class="property-info">
-<h3>2BHK Flat</h3>
-<p>Salt Lake</p>
-<div class="price">₹18,000</div>
-<a href="#" class="view-btn">View Details</a>
-</div>
-</div>
-
-<div class="property-card" data-category="rent" data-type="pg" data-price="6500" data-location="college street">
 <img src="assets/images/property2.jpg">
-<div class="property-info">
-<h3>Student PG</h3>
-<p>College Street</p>
-<div class="price">₹6,500</div>
-<a href="#" class="view-btn">View Details</a>
-</div>
 </div>
 
-<div class="property-card" data-category="buy" data-type="plot" data-price="50000" data-location="new town">
+<h3>2BHK Flat in Salt Lake</h3>
+<p>Location: Salt Lake</p>
+<p>Price: ₹18,000</p>
+<p>Contact: 8240473982</p>
+<p>Beautiful 2BHK flat near metro and IT hub.</p>
+
+<div class="card-buttons">
+<button onclick="openDetails(this)">View Details</button>
+<button onclick="whatsappContact('2BHK Flat in Salt Lake')">WhatsApp</button>
+</div>
+
+</div>
+
+<!-- PROPERTY 2 -->
+<div class="property-card"
+data-type="rent"
+data-category="pg"
+data-location="newtown"
+data-price="7000">
+
+<div class="property-images">
 <img src="assets/images/property3.jpg">
-<div class="property-info">
-<h3>Residential Plot</h3>
-<p>New Town</p>
-<div class="price">₹50,000</div>
-<a href="#" class="view-btn">View Details</a>
+<img src="assets/images/property4.jpg">
 </div>
+
+<h3>PG in New Town</h3>
+<p>Location: New Town</p>
+<p>Price: ₹7,000</p>
+<p>Contact: 8240473982</p>
+<p>Comfortable PG for working professionals.</p>
+
+<div class="card-buttons">
+<button onclick="openDetails(this)">View Details</button>
+<button onclick="whatsappContact('PG in New Town')">WhatsApp</button>
 </div>
 
 </div>
+
+<!-- PROPERTY 3 -->
+<div class="property-card"
+data-type="buy"
+data-category="flat"
+data-location="garia"
+data-price="4500000">
+
+<div class="property-images">
+<img src="assets/images/property5.jpg">
+<img src="assets/images/property6.jpg">
+</div>
+
+<h3>3BHK Flat for Sale in Garia</h3>
+<p>Location: Garia</p>
+<p>Price: ₹45,00,000</p>
+<p>Contact: 8240473982</p>
+<p>Spacious 3BHK perfect for family living.</p>
+
+<div class="card-buttons">
+<button onclick="openDetails(this)">View Details</button>
+<button onclick="whatsappContact('3BHK Flat for Sale in Garia')">WhatsApp</button>
+</div>
+
+</div>
+
+</section>
 
 <footer>
-<p>© 2026 Baribaba. All Rights Reserved.</p>
+<p>© 2025-26 Baribaba.</p>
 </footer>
 
-<script>
-
-let currentCategory = "all";
-
-function setCategory(category){
-currentCategory = category;
-
-document.querySelectorAll(".filters button").forEach(btn=>{
-btn.classList.remove("active");
-});
-
-event.target.classList.add("active");
-filterProperties();
-}
-
-function filterProperties(){
-const location = document.getElementById("locationInput").value.toLowerCase();
-const type = document.getElementById("typeSelect").value;
-const budget = document.getElementById("budgetSelect").value;
-
-document.querySelectorAll(".property-card").forEach(card=>{
-const cardCategory = card.dataset.category;
-const cardType = card.dataset.type;
-const cardPrice = parseInt(card.dataset.price);
-const cardLocation = card.dataset.location;
-
-let show = true;
-
-if(currentCategory !== "all" && cardCategory !== currentCategory){
-show = false;
-}
-
-if(type && cardType !== type){
-show = false;
-}
-
-if(budget){
-if(budget === "10000" && cardPrice >= 10000) show = false;
-if(budget === "25000" && (cardPrice < 10000 || cardPrice > 25000)) show = false;
-if(budget === "50000" && cardPrice < 25000) show = false;
-}
-
-if(location && !cardLocation.includes(location)){
-show = false;
-}
-
-card.classList.toggle("hidden", !show);
-});
-}
-
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
