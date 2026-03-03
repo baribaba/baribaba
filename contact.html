@@ -1,158 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Baribaba</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Founders | Baribaba</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+    body { background:#f7f7f7; color:#222; }
+
+    header { background:#fff; padding:16px 60px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    header img { height:40px; }
+    nav a { margin-left:25px; text-decoration:none; color:#222; font-weight:500; }
+    nav a:hover { color:#d81f26; }
+
+    .hero { background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('assets/images/hero.jpg') center/cover no-repeat; padding:90px 60px; color:#fff; text-align:center; }
+    .hero h1 { font-size:42px; margin-bottom:10px; }
+    .hero p { font-size:18px; max-width:700px; margin:auto; }
+
+    section { padding:80px 60px; }
+
+    .founders { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px; max-width:1100px; margin:auto; }
+
+    .founder { background:#fff; padding:40px; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.1); }
+    .founder img { width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:20px; }
+    .founder h2 { margin-bottom:6px; }
+    .role { color:#d81f26; font-weight:600; margin-bottom:15px; }
+    .founder p { color:#555; line-height:1.8; }
+
+    .vision { background:#fff; border-radius:18px; padding:50px; max-width:900px; margin:80px auto 0; box-shadow:0 10px 30px rgba(0,0,0,.1); text-align:center; }
+    .vision h3 { font-size:30px; margin-bottom:15px; }
+    .vision p { color:#555; line-height:1.8; }
+
+    footer { background:#111; color:#aaa; text-align:center; padding:35px; margin-top:80px; }
+
+    @media(max-width:768px){
+      header, section, .hero { padding:40px 25px; }
+      .hero h1 { font-size:32px; }
+    }
+  </style>
+</head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
-    <div class="logo">
-        <img src="assets/images/logo.png" alt="Baribaba Logo">
-    </div>
-
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about-founder.html">About Us</a>
-        <a href="search.html">Find Property</a>
-        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">List Property</a>
-        <a href="partnership.html">Partnership</a>
-        <a href="reviews.html">Testimonials</a>
-        <a href="faq.html">FAQ</a>
-        <a class="active" href="contact.html">Contact Us</a>
-    </div>
+<header>
+  <img src="assets/images/logo.png" alt="Baribaba Logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="management.html">Management</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" style="height:55vh;">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>Contact Us</h1>
-        <p>We're here to help you find your perfect space</p>
+<div class="hero">
+  <h1>Meet the Founders</h1>
+  <p>The people behind Baribaba’s vision to simplify real estate for everyone</p>
+</div>
+
+<section>
+  <div class="founders">
+
+    <div class="founder">
+      <img src="assets/images/argha.jpg" alt="Argha Chakraborty" />
+      <h2>Argha Chakraborty</h2>
+      <div class="role">Founder</div>
+      <p>
+        Argha Chakraborty is the Founder of Baribaba, a platform built to simplify property renting and buying by reducing dependency on traditional brokers. With a strong vision to make real estate more transparent, affordable, and user-friendly, Argha focuses on creating tech-driven solutions that connect property owners and seekers directly. His leadership is driven by innovation, trust, and customer-first values.
+      </p>
     </div>
+
+    <div class="founder">
+      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik" />
+      <h2>Soumik Pramanik</h2>
+      <div class="role">Co-Founder</div>
+      <p>
+        Soumik Pramanik is the Co-Founder of Baribaba and a key force behind its operations and growth strategy. He plays an important role in coordination, execution, and partner management. With a practical approach and strong teamwork mindset, Soumik ensures smooth operations while supporting Baribaba’s mission to reshape the real estate experience.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="vision">
+    <h3>Our Shared Vision</h3>
+    <p>
+      Together, the founders of Baribaba aim to create a transparent, trustworthy, and technology-driven real estate platform that puts people first. From students and families to professionals and businesses, Baribaba is built to serve everyone — making property decisions simpler, smarter, and stress-free.
+    </p>
+  </div>
 </section>
 
-<!-- ================= CONTACT SECTION ================= -->
-<section class="contact-section">
-
-<h2>📞 Contact Baribaba</h2>
-
-<p style="text-align:center; max-width:800px; margin:auto;">
-Looking for a room or flat without paying brokerage?  
-Need help listing your property?  
-We’re here to help!
-</p>
-
-<br><br>
-
-<div class="contact-container">
-
-<!-- LEFT SIDE - OFFICE INFO -->
-<div class="contact-info">
-
-<h3>🏢 Our Office</h3>
-
-<p><strong>📍 Location:</strong> Kolkata, West Bengal, India</p>
-<p><strong>🌐 Website:</strong> www.baribaba.com</p>
-<p><strong>📧 Email:</strong> help@baribaba.com</p>
-<p><strong>📱 Phone / WhatsApp:</strong> +91 8240473982</p>
-
-<br>
-
-<h3>💬 Get in Touch About</h3>
-
-<ul>
-<li>Finding rooms or flats for rent</li>
-<li>Buying or selling property</li>
-<li>Listing your property</li>
-<li>Collaboration & partnerships</li>
-<li>Verified listings & bilingual support</li>
-</ul>
-
-</div>
-
-<!-- RIGHT SIDE - CONTACT FORM -->
-<div class="contact-form">
-
-<h3>📩 Send Us a Message</h3>
-
-<form action="https://formsubmit.co/help@baribaba.com" method="POST">
-
-<input type="text" name="name" placeholder="Full Name" required>
-
-<input type="tel" name="phone" placeholder="Phone Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<select name="role" required>
-<option value="">I am a:</option>
-<option>Tenant</option>
-<option>Property Owner</option>
-<option>Builder</option>
-<option>Agent</option>
-<option>Broker</option>
-</select>
-
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-<button type="submit" class="post-btn">Submit Message</button>
-
-</form>
-
-<p style="font-size:14px; margin-top:10px;">
-We usually respond within 24 hours.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= WHY CONTACT ================= -->
-<section style="text-align:center;">
-
-<h2>🤝 Why Contact Baribaba?</h2>
-
-<div class="benefits">
-
-<div class="benefit-card">
-✔ 100% Broker-Free Model
-</div>
-
-<div class="benefit-card">
-✔ Verified Property Listings
-</div>
-
-<div class="benefit-card">
-✔ Transparent Communication
-</div>
-
-<div class="benefit-card">
-✔ Bilingual Support (English & Bengali)
-</div>
-
-<div class="benefit-card">
-✔ Fast WhatsApp Response
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= WHATSAPP FLOAT ================= -->
-<a href="https://wa.me/918240473982?text=Hello%20Baribaba%2C%20I%20want%20help%20regarding%20property."
-   class="whatsapp-float"
-   target="_blank">
-   💬
-</a>
-
-<script src="script.js"></script>
+<footer>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100087916466794" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/company/baribaba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/918240473982" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>© 2026 Baribaba. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
