@@ -98,36 +98,54 @@ box-shadow:0 6px 20px rgba(0,0,0,.08);
 font-weight:600;
 }
 
-/* ✅ AUTO IMAGE SLIDER */
+/* AUTO IMAGE SLIDER */
+
 .slider{
-width:25%;
-height:280px;
-overflow:hidden;
-margin-top:40px;
+    width:100%;
+    height:500px;
+    overflow:hidden;
+    margin-top:40px;
 }
 
 .slides{
-display:flex;
-width:280%;
-animation:slide 16s infinite;
+    display:flex;
+    width:900%;              /* 9 images = 900% */
+    animation:slide 27s infinite;  /* 5s per image */
 }
 
 .slides img{
-width:25%;
-height:280px;
-object-fit:cover;
+    width:100%;
+    height:500px;     /* SAME as slider height */
+    object-fit:cover; /* Important */
 }
 
 @keyframes slide{
-0%{margin-left:0%;}
-20%{margin-left:0%;}
-25%{margin-left:-100%;}
-45%{margin-left:-100%;}
-50%{margin-left:-200%;}
-70%{margin-left:-200%;}
-75%{margin-left:-300%;}
-95%{margin-left:-300%;}
-100%{margin-left:0%;}
+    0%{margin-left:0%;}
+    11%{margin-left:0%;}
+
+    12%{margin-left:-100%;}
+    22%{margin-left:-100%;}
+
+    23%{margin-left:-200%;}
+    33%{margin-left:-200%;}
+
+    34%{margin-left:-300%;}
+    44%{margin-left:-300%;}
+
+    45%{margin-left:-400%;}
+    55%{margin-left:-400%;}
+
+    56%{margin-left:-500%;}
+    66%{margin-left:-500%;}
+
+    67%{margin-left:-600%;}
+    77%{margin-left:-600%;}
+
+    78%{margin-left:-700%;}
+    88%{margin-left:-700%;}
+
+    89%{margin-left:-800%;}
+    100%{margin-left:-800%;}
 }
 
 /* Founders */
