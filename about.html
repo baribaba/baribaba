@@ -4,261 +4,164 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Baribaba</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#f7f7f7;
-  color:#222;
-}
-
-/* ================= NAVBAR ================= */
-header{
-  background:#fff;
-  padding:16px 60px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,.06);
-  position:fixed;
-  width:100%;
-  top:0;
-  left:0;
-  z-index:1000;
-}
-
-header img{ height:40px; }
-
-nav a{
-  margin-left:25px;
-  text-decoration:none;
-  color:#222;
-  font-weight:500;
-  transition:.3s;
-}
-
-nav a:hover{
-  color:#d81f26;
-}
-
-/* ================= HERO ================= */
-.hero{
-  margin-top:80px;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), 
-  url('assets/images/hero.jpg') center/cover no-repeat;
-  padding:120px 60px;
-  color:#fff;
-  text-align:center;
-  animation:fadeIn 1.2s ease;
-}
-
-.hero h1{
-  font-size:44px;
-  margin-bottom:12px;
-}
-
-.hero p{
-  font-size:18px;
-}
-
-/* ================= SECTIONS ================= */
-section{
-  padding:90px 60px;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:50px;
-}
-
-.section-title h2{
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.section-title p{
-  color:#666;
-  max-width:750px;
-  margin:auto;
-}
-
-/* ================= ABOUT CONTENT ================= */
-.about-content{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-  animation:fadeUp 1s ease;
-}
-
-.about-content img{
-  width:100%;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-
-.about-text h3{
-  font-size:26px;
-  margin-bottom:15px;
-}
-
-.about-text p{
-  line-height:1.8;
-  color:#555;
-}
-
-/* ================= VALUES ================= */
-.values{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  margin-top:50px;
-}
-
-.value-card{
-  background:#fff;
-  padding:35px;
-  border-radius:14px;
-  box-shadow:0 8px 24px rgba(0,0,0,.08);
-  text-align:center;
-  transition:.4s;
-  animation:fadeUp 1s ease;
-}
-
-.value-card:hover{
-  transform:translateY(-8px);
-}
-
-.value-card h4{
-  margin-bottom:12px;
-  color:#d81f26;
-}
-
-/* ================= FOOTER ================= */
-footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:35px;
-  margin-top:80px;
-}
-
-/* ================= ANIMATION ================= */
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-@media(max-width:900px){
-  .about-content{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:768px){
-  header, section, .hero{
-    padding:40px 25px;
-  }
-  .hero h1{
-    font-size:32px;
-  }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <img src="assets/images/logo.png" alt="Baribaba Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="find-property.html">Find Property</a>
-    <a href="list-property.html">List Property</a>
-    <a href="partnership.html">Partnership</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+<header class="navbar">
+<div class="logo">Baribaba</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="find-property.html">Find Property</a>
+<a href="list-property.html">List Property</a>
+<a href="collaboration.html">Partnership</a>
+<a href="testimonials.html">Testimonials</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact Us</a>
+</nav>
 </header>
 
-<div class="hero">
-  <h1>About Baribaba</h1>
-  <p>Making property search simple, honest & stress-free</p>
+<section class="page-hero">
+<h1>About Baribaba</h1>
+</section>
+
+<section class="content-section">
+
+<h2>What is Baribaba?</h2>
+<p>
+Baribaba is a Kolkata-based broker-free room and flat finding platform that helps students,
+working professionals, and families connect directly with property owners — without paying heavy brokerage fees.
+</p>
+<p>
+We focus on verified listings, transparent communication, and real human support to make house-hunting simple, affordable, and stress-free.
+</p>
+<p><strong>At Baribaba, we believe:</strong></p>
+<p>Finding a home should not come with unnecessary extra costs.</p>
+
+</section>
+
+<section class="content-section">
+<h2>Mission & Vision</h2>
+
+<h3>Our Mission</h3>
+<p>
+To make rental housing affordable and accessible by eliminating brokerage fees
+and providing verified property listings with complete transparency.
+</p>
+
+<h3>Our Vision</h3>
+<p>
+To become Kolkata’s most trusted broker-free rental platform and expand across
+major cities in India — setting a new standard for stress-free home searching.
+</p>
+</section>
+
+<section class="content-section">
+<h2>Why Baribaba Started</h2>
+<p>
+Baribaba was created to solve a common problem.
+Every year, thousands of people moving to Kolkata end up paying one month’s rent as brokerage — often for listings that are not verified or properly managed.
+</p>
+<p><strong>We asked a simple question:</strong></p>
+<p>Why should people pay extra just to find a room?</p>
+<p>
+To change this system, Baribaba introduced a broker-free, digital-first model that connects tenants directly with property owners.
+</p>
+</section>
+
+<section class="content-section">
+<h2>The Broker-Free Concept</h2>
+<ul class="bullet-list">
+<li>✔ No brokerage fees</li>
+<li>✔ No hidden charges</li>
+<li>✔ Direct owner communication</li>
+<li>✔ Verified property listings</li>
+<li>✔ Transparent process</li>
+</ul>
+<p>
+Our broker-free concept ensures affordability, clarity, and faster decision-making for tenants.
+</p>
+</section>
+
+<!-- Founder Combined Image -->
+<section class="content-section center">
+<img src="assets/images/founders-together.jpg" class="founder-main">
+<h2>Founder Story – Argha Chakraborty & Soumik Pramanik</h2>
+<p>
+Baribaba was founded by Argha Chakraborty and Soumik Pramanik with a shared vision
+of solving real-life rental problems in Kolkata.
+</p>
+<p>
+After personally experiencing the challenges of paying brokerage and dealing with unreliable listings,
+they decided to build a smarter alternative.
+</p>
+<p>
+With a focus on technology, trust, and transparency, they created Baribaba —
+a platform designed to serve real people with real needs.
+</p>
+<p><strong>Their goal is simple:</strong> Make house hunting easier, fairer, and more affordable.</p>
+</section>
+
+<section class="founder-grid">
+
+<div class="founder-card">
+<img src="assets/images/argha.jpg">
+<h3>Argha – Co-Founder</h3>
+<p>
+Argha is the driving force behind Baribaba’s mission to make rental housing transparent and broker-free.
+He believes that trust and technology together can transform the rental experience.
+</p>
 </div>
 
-<section>
-<div class="container">
-
-  <div class="section-title">
-    <h2>Who We Are</h2>
-    <p>Baribaba is a modern real estate platform built to remove confusion, hidden charges, and unnecessary brokerage stress from property transactions.</p>
-  </div>
-
-  <div class="about-content">
-    <img src="assets/images/about.jpg" alt="About Baribaba">
-    <div class="about-text">
-      <h3>Your Trusted Property Partner</h3>
-      <p>
-        At Baribaba, we help people find rooms, flats, PGs, plots, and commercial spaces easily. 
-        Whether you want to rent, buy, or list your property, our goal is simple — provide transparency, genuine listings, and friendly support.
-      </p>
-      <p>
-        We focus on connecting property owners and seekers directly, reducing unnecessary middle layers and making the process smooth and reliable.
-      </p>
-    </div>
-  </div>
-
-  <div class="section-title" style="margin-top:90px;">
-    <h2>Our Core Values</h2>
-  </div>
-
-  <div class="values">
-    <div class="value-card">
-      <h4>Transparency</h4>
-      <p>No hidden costs. Clear communication at every step.</p>
-    </div>
-
-    <div class="value-card">
-      <h4>Trust</h4>
-      <p>Verified listings and genuine connections.</p>
-    </div>
-
-    <div class="value-card">
-      <h4>Customer First</h4>
-      <p>Your comfort and satisfaction are our top priority.</p>
-    </div>
-
-    <div class="value-card">
-      <h4>Innovation</h4>
-      <p>Using modern solutions to simplify property dealings.</p>
-    </div>
-  </div>
-
+<div class="founder-card">
+<img src="assets/images/soumik.jpg">
+<h3>Soumik – Co-Founder</h3>
+<p>
+Soumik focuses on operations, verification, and customer support.
+His goal is to ensure every listing is genuine and every user receives quick, reliable assistance.
+</p>
 </div>
+
+</section>
+
+<section class="content-section">
+<h2>Their Shared Vision</h2>
+<p>
+If people can book flights and hotels online without agents,
+why not find a room without brokers?
+</p>
+<p>
+Together, they are building Baribaba to become Kolkata’s most trusted rental solution —
+focused on transparency, affordability, and genuine support.
+</p>
+</section>
+
+<section class="content-section">
+<h2>Our Core Values</h2>
+<ul class="bullet-list">
+<li><strong>Transparency</strong> – Clear pricing. No hidden surprises.</li>
+<li><strong>Trust</strong> – Verified listings and honest communication.</li>
+<li><strong>Accessibility</strong> – Affordable rental solutions for everyone.</li>
+<li><strong>Support</strong> – Quick response and bilingual assistance.</li>
+<li><strong>Innovation</strong> – Using technology to improve the rental experience.</li>
+</ul>
+</section>
+
+<section class="content-section">
+<h2>Our Purpose</h2>
+<p>
+Baribaba exists to build trust in the rental market.
+We aim to replace confusion with clarity, pressure with comfort, and brokerage fees with fairness.
+</p>
+<p>
+Because a home is not just a space — it’s a fresh start.
+</p>
 </section>
 
 <footer>
-  <p>© 2026 Baribaba. All Rights Reserved.</p>
+<p>© 2025-26 Baribaba.</p>
 </footer>
 
 </body>
