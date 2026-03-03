@@ -1,4 +1,16 @@
-/* Global Styles */
+/* ===============================
+   BARIBABA OFFICIAL BRAND STYLES
+================================= */
+
+:root {
+  --brand-color: #d81f26;
+  --brand-dark: #b5171c;
+  --light-bg: #f5f7fa;
+  --text-dark: #222;
+  --text-light: #666;
+}
+
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -7,26 +19,28 @@
 }
 
 body {
-  background: #f5f7fa;
-  color: #222;
+  background: var(--light-bg);
+  color: var(--text-dark);
 }
 
-/* Navbar */
+/* ===============================
+   NAVBAR
+================================= */
+
 .navbar {
   width: 100%;
   padding: 20px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
 }
 
-/* SVG Logo Styling */
 .logo svg {
   height: 45px;
   width: auto;
@@ -38,25 +52,35 @@ body {
   text-decoration: none;
   font-weight: 500;
   color: #444;
-  transition: color 0.2s;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #6A0DFF;
+  color: var(--brand-color);
 }
 
+/* Post Property Button */
 .post-btn {
-  background: #00c26f;
+  background: var(--brand-color);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 10px 22px;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
+  transition: 0.3s ease;
 }
 
-/* Hero Section */
+.post-btn:hover {
+  background: var(--brand-dark);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+
 .hero {
   height: 75vh;
   background: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688') center/cover no-repeat;
@@ -73,13 +97,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(70, 0, 200, 0.45);
+  background: rgba(216, 31, 38, 0.65);
 }
 
 .hero-content {
   position: relative;
   text-align: center;
   color: white;
+  max-width: 700px;
 }
 
 .hero-content h1 {
@@ -88,7 +113,7 @@ body {
 }
 
 .hero-content p {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 18px;
 }
 
@@ -98,36 +123,51 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .search-box input {
   padding: 12px 20px;
-  width: 320px;
+  width: 280px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 16px;
 }
 
 .search-box button {
-  padding: 12px 20px;
-  background: #6A0DFF;
+  padding: 12px 22px;
+  background: var(--brand-color);
   border: none;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* -------- Founder Section -------- */
-.founder-section {
-  padding: 60px 20px;
+.search-box button:hover {
+  background: var(--brand-dark);
+}
+
+/* ===============================
+   SECTION HEADINGS
+================================= */
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: var(--brand-color);
   text-align: center;
 }
 
-.founder-section h2 {
-  font-size: 32px;
-  margin-bottom: 35px;
-  color: #333;
+/* ===============================
+   FOUNDER SECTION
+================================= */
+
+.founder-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
 }
 
 .founders {
@@ -138,42 +178,48 @@ body {
 }
 
 .founder-card {
-  width: 230px;
+  width: 240px;
   padding: 20px;
   background: #fff;
-  border-radius: 14px;
-  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  border-radius: 16px;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
 }
 
 .founder-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 }
 
 .founder-card img {
   width: 100%;
-  height: 230px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 14px;
+  border: 3px solid var(--brand-color);
 }
 
 .founder-card h3 {
-  margin-top: 12px;
+  margin-top: 15px;
   font-size: 18px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-dark);
 }
 
 .founder-card p {
   margin-top: 6px;
   font-size: 14px;
-  color: #666;
+  color: var(--text-light);
 }
 
-  background: #ffffff;
+/* ===============================
+   FOOTER
+================================= */
+
+footer {
+  background: #111;
   margin-top: 60px;
-  border-top: 1px solid #e5e5e5;
-  padding: 40px 0 20px;
+  padding: 50px 0 20px;
+  color: #ccc;
 }
 
 .footer-container {
@@ -192,7 +238,7 @@ body {
 
 .footer-logo p {
   margin-top: 10px;
-  color: #555;
+  color: #aaa;
   font-size: 14px;
 }
 
@@ -200,33 +246,87 @@ body {
 .footer-contact h4 {
   margin-bottom: 12px;
   font-size: 18px;
-  color: #333;
+  color: white;
 }
 
 .footer-links a {
   display: block;
   margin-bottom: 8px;
-  color: #555;
+  color: #aaa;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .footer-links a:hover {
-  color: #6A0DFF;
+  color: var(--brand-color);
 }
 
 .footer-contact p {
   margin-bottom: 6px;
-  color: #555;
   font-size: 14px;
+  color: #aaa;
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 25px;
-  padding-top: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
   color: #777;
   font-size: 14px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #222;
 }
 
+/* ===============================
+   FLOATING WHATSAPP BUTTON
+================================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  z-index: 2000;
+  text-decoration: none;
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .footer-container {
+    padding: 0 20px;
+  }
+}
