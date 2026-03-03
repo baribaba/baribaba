@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Founders | Baribaba</title>
+  <title>Contact Us | Baribaba</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -22,19 +22,33 @@
 
     section { padding:80px 60px; }
 
-    .founders { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px; max-width:1100px; margin:auto; }
+    .contact-wrapper { display:grid; grid-template-columns:1.2fr 1fr; gap:40px; max-width:1100px; margin:auto; }
 
-    .founder { background:#fff; padding:40px; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.1); }
-    .founder img { width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:20px; }
-    .founder h2 { margin-bottom:6px; }
-    .role { color:#d81f26; font-weight:600; margin-bottom:15px; }
-    .founder p { color:#555; line-height:1.8; }
+    .contact-box { background:#fff; padding:45px; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.1); }
+    .contact-box h2 { margin-bottom:15px; }
+    .contact-box p { color:#555; margin-bottom:25px; line-height:1.7; }
 
-    .vision { background:#fff; border-radius:18px; padding:50px; max-width:900px; margin:80px auto 0; box-shadow:0 10px 30px rgba(0,0,0,.1); text-align:center; }
-    .vision h3 { font-size:30px; margin-bottom:15px; }
-    .vision p { color:#555; line-height:1.8; }
+    form input, form textarea {
+      width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;
+    }
+    form button {
+      background:#d81f26; color:#fff; border:none; padding:14px; border-radius:8px; width:100%; font-weight:600; cursor:pointer;
+    }
+    form button:hover { background:#b5171c; }
+
+    .info div { margin-bottom:20px; }
+    .info strong { display:block; margin-bottom:5px; }
+
+    .whatsapp-box { background:#25d366; color:#fff; padding:18px; border-radius:12px; text-align:center; margin-top:25px; }
+    .whatsapp-box a { color:#fff; font-weight:600; text-decoration:none; }
+
+    iframe { width:100%; height:260px; border:0; border-radius:14px; margin-top:25px; }
 
     footer { background:#111; color:#aaa; text-align:center; padding:35px; margin-top:80px; }
+
+    @media(max-width:900px){
+      .contact-wrapper { grid-template-columns:1fr; }
+    }
 
     @media(max-width:768px){
       header, section, .hero { padding:40px 25px; }
@@ -56,38 +70,47 @@
 </header>
 
 <div class="hero">
-  <h1>Meet the Founders</h1>
-  <p>The people behind Baribaba’s vision to simplify real estate for everyone</p>
+  <h1>Contact Baribaba</h1>
+  <p>We are here to help you find the right property with trust and transparency</p>
 </div>
 
 <section>
-  <div class="founders">
+  <div class="contact-wrapper">
 
-    <div class="founder">
-      <img src="assets/images/argha.jpg" alt="Argha Chakraborty" />
-      <h2>Argha Chakraborty</h2>
-      <div class="role">Founder</div>
-      <p>
-        Argha Chakraborty is the Founder of Baribaba, a platform built to simplify property renting and buying by reducing dependency on traditional brokers. With a strong vision to make real estate more transparent, affordable, and user-friendly, Argha focuses on creating tech-driven solutions that connect property owners and seekers directly. His leadership is driven by innovation, trust, and customer-first values.
-      </p>
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <p>Have a question or need help with rent, buy, or sell? Fill out the form and our team will contact you shortly.</p>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
 
-    <div class="founder">
-      <img src="assets/images/soumik.jpg" alt="Soumik Pramanik" />
-      <h2>Soumik Pramanik</h2>
-      <div class="role">Co-Founder</div>
-      <p>
-        Soumik Pramanik is the Co-Founder of Baribaba and a key force behind its operations and growth strategy. He plays an important role in coordination, execution, and partner management. With a practical approach and strong teamwork mindset, Soumik ensures smooth operations while supporting Baribaba’s mission to reshape the real estate experience.
-      </p>
+    <div class="contact-box info">
+      <h2>Contact Information</h2>
+      <div>
+        <strong>Phone</strong>
+        <p>8240473982</p>
+      </div>
+      <div>
+        <strong>Email</strong>
+        <p>help@baribaba.com</p>
+      </div>
+      <div>
+        <strong>WhatsApp</strong>
+        <p>8240473982</p>
+      </div>
+
+      <div class="whatsapp-box">
+        <a href="https://wa.me/918240473982" target="_blank">Chat with us on WhatsApp</a>
+      </div>
+
+      <iframe src="https://www.google.com/maps?q=Kolkata&output=embed"></iframe>
     </div>
 
-  </div>
-
-  <div class="vision">
-    <h3>Our Shared Vision</h3>
-    <p>
-      Together, the founders of Baribaba aim to create a transparent, trustworthy, and technology-driven real estate platform that puts people first. From students and families to professionals and businesses, Baribaba is built to serve everyone — making property decisions simpler, smarter, and stress-free.
-    </p>
   </div>
 </section>
 
