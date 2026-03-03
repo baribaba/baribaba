@@ -1,302 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Baribaba</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    :root {
-      --brand-color:#d81f26;
-      --brand-dark:#b5171c;
-    }
-
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-    body { background:#f7f7f7; color:#222; }
-
-    header {
-      background:#fff;
-      padding:16px 60px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-shadow:0 2px 10px rgba(0,0,0,.06);
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-
-    header img { height:45px; }
-
-    nav a {
-      margin-left:25px;
-      text-decoration:none;
-      color:#222;
-      font-weight:500;
-      transition:.3s;
-    }
-
-    nav a:hover { color:var(--brand-color); }
-
-    .hero {
-      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('assets/images/hero.jpg') center/cover no-repeat;
-      padding:100px 60px;
-      color:#fff;
-      text-align:center;
-    }
-
-    .hero h1 {
-      font-size:42px;
-      margin-bottom:10px;
-    }
-
-    .hero p {
-      font-size:18px;
-      max-width:750px;
-      margin:auto;
-    }
-
-    section { padding:80px 60px; }
-
-    .contact-wrapper {
-      display:grid;
-      grid-template-columns:1.2fr 1fr;
-      gap:40px;
-      max-width:1100px;
-      margin:auto;
-    }
-
-    .contact-box {
-      background:#fff;
-      padding:45px;
-      border-radius:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-    }
-
-    .contact-box h2 {
-      margin-bottom:15px;
-      color:var(--brand-color);
-    }
-
-    .contact-box p {
-      color:#555;
-      margin-bottom:25px;
-      line-height:1.7;
-    }
-
-    form input, form select, form textarea {
-      width:100%;
-      padding:14px;
-      margin-bottom:15px;
-      border:1px solid #ddd;
-      border-radius:8px;
-    }
-
-    form button {
-      background:var(--brand-color);
-      color:#fff;
-      border:none;
-      padding:14px;
-      border-radius:8px;
-      width:100%;
-      font-weight:600;
-      cursor:pointer;
-      transition:.3s;
-    }
-
-    form button:hover { background:var(--brand-dark); }
-
-    .info div { margin-bottom:20px; }
-
-    .info strong {
-      display:block;
-      margin-bottom:5px;
-      color:var(--brand-color);
-    }
-
-    .whatsapp-box {
-      background:#25d366;
-      color:#fff;
-      padding:18px;
-      border-radius:12px;
-      text-align:center;
-      margin-top:25px;
-    }
-
-    .whatsapp-box a {
-      color:#fff;
-      font-weight:600;
-      text-decoration:none;
-    }
-
-    iframe {
-      width:100%;
-      height:260px;
-      border:0;
-      border-radius:14px;
-      margin-top:25px;
-    }
-
-    footer {
-      background:#111;
-      color:#aaa;
-      text-align:center;
-      padding:40px;
-      margin-top:80px;
-    }
-
-    .footer-social {
-      margin-bottom:20px;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-    }
-
-    .footer-social a {
-      width:42px;
-      height:42px;
-      border-radius:50%;
-      background:#1f1f1f;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-size:18px;
-      transition:.3s;
-      text-decoration:none;
-    }
-
-    .footer-social a:hover {
-      background:var(--brand-color);
-      transform:translateY(-4px);
-    }
-
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position:fixed;
-      bottom:25px;
-      right:25px;
-      background:#25D366;
-      color:white;
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:26px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.3);
-      z-index:2000;
-      text-decoration:none;
-    }
-
-    @media(max-width:900px){
-      .contact-wrapper { grid-template-columns:1fr; }
-    }
-
-    @media(max-width:768px){
-      header, section, .hero { padding:40px 25px; }
-      .hero h1 { font-size:32px; }
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Baribaba</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico">
 </head>
+
 <body>
 
-<header>
-  <img src="assets/images/logo.png" alt="Baribaba Logo" />
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="management.html">Management</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo">
+        <img src="assets/images/logo.png" alt="Baribaba Logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about-founder.html">About Us</a>
+        <a href="search.html">Find Property</a>
+        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">List Property</a>
+        <a href="partnership.html">Partnership</a>
+        <a href="reviews.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a class="active" href="contact.html">Contact Us</a>
+    </div>
 </header>
 
-<div class="hero">
-  <h1>📞 Contact Us – Baribaba</h1>
-  <p>Looking for a room or flat without paying brokerage? Need help listing your property? We’re here to help!</p>
-</div>
-
-<section>
-  <div class="contact-wrapper">
-
-    <div class="contact-box">
-      <h2>💬 Get in Touch</h2>
-      <p>Fill out the form below and our team will get back to you within 24 hours.</p>
-
-      <form>
-        <input type="text" placeholder="Full Name" required />
-        <input type="tel" placeholder="Phone Number" required />
-        <input type="email" placeholder="Email Address" required />
-
-        <select required>
-          <option value="">I am a:</option>
-          <option>Tenant</option>
-          <option>Property Owner</option>
-          <option>Builder</option>
-          <option>Agent</option>
-          <option>Broker</option>
-        </select>
-
-        <textarea rows="5" placeholder="Your Message"></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+<!-- ================= HERO ================= -->
+<section class="hero" style="height:55vh;">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>We're here to help you find your perfect space</p>
     </div>
-
-    <div class="contact-box info">
-      <h2>🏢 Our Office</h2>
-
-      <div>
-        <strong>Location</strong>
-        <p>Kolkata, West Bengal, India</p>
-      </div>
-
-      <div>
-        <strong>Email</strong>
-        <p>help@baribaba.com</p>
-      </div>
-
-      <div>
-        <strong>Phone / WhatsApp</strong>
-        <p>+91 8240473982</p>
-      </div>
-
-      <div class="whatsapp-box">
-        <a href="https://wa.me/918240473982?text=Hello! I am interested in Baribaba's services." target="_blank">
-          Chat with us instantly on WhatsApp
-        </a>
-      </div>
-
-      <iframe src="https://www.google.com/maps?q=Kolkata&output=embed"></iframe>
-    </div>
-
-  </div>
 </section>
 
-<footer>
-  <div class="footer-social">
-    <a href="https://www.instagram.com/bari_baba__/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/profile.php?id=100087916466794" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.linkedin.com/company/baribaba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-  <p>© 2026 Baribaba. All Rights Reserved.</p>
-</footer>
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
 
-<!-- Floating WhatsApp -->
-<a class="whatsapp-float" 
-   href="https://wa.me/918240473982?text=Hello! I am contacting Baribaba regarding a property inquiry." 
+<h2>📞 Contact Baribaba</h2>
+
+<p style="text-align:center; max-width:800px; margin:auto;">
+Looking for a room or flat without paying brokerage?  
+Need help listing your property?  
+We’re here to help!
+</p>
+
+<br><br>
+
+<div class="contact-container">
+
+<!-- LEFT SIDE - OFFICE INFO -->
+<div class="contact-info">
+
+<h3>🏢 Our Office</h3>
+
+<p><strong>📍 Location:</strong> Kolkata, West Bengal, India</p>
+<p><strong>🌐 Website:</strong> www.baribaba.com</p>
+<p><strong>📧 Email:</strong> help@baribaba.com</p>
+<p><strong>📱 Phone / WhatsApp:</strong> +91 8240473982</p>
+
+<br>
+
+<h3>💬 Get in Touch About</h3>
+
+<ul>
+<li>Finding rooms or flats for rent</li>
+<li>Buying or selling property</li>
+<li>Listing your property</li>
+<li>Collaboration & partnerships</li>
+<li>Verified listings & bilingual support</li>
+</ul>
+
+</div>
+
+<!-- RIGHT SIDE - CONTACT FORM -->
+<div class="contact-form">
+
+<h3>📩 Send Us a Message</h3>
+
+<form action="https://formsubmit.co/help@baribaba.com" method="POST">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<select name="role" required>
+<option value="">I am a:</option>
+<option>Tenant</option>
+<option>Property Owner</option>
+<option>Builder</option>
+<option>Agent</option>
+<option>Broker</option>
+</select>
+
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="post-btn">Submit Message</button>
+
+</form>
+
+<p style="font-size:14px; margin-top:10px;">
+We usually respond within 24 hours.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CONTACT ================= -->
+<section style="text-align:center;">
+
+<h2>🤝 Why Contact Baribaba?</h2>
+
+<div class="benefits">
+
+<div class="benefit-card">
+✔ 100% Broker-Free Model
+</div>
+
+<div class="benefit-card">
+✔ Verified Property Listings
+</div>
+
+<div class="benefit-card">
+✔ Transparent Communication
+</div>
+
+<div class="benefit-card">
+✔ Bilingual Support (English & Bengali)
+</div>
+
+<div class="benefit-card">
+✔ Fast WhatsApp Response
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/918240473982?text=Hello%20Baribaba%2C%20I%20want%20help%20regarding%20property."
+   class="whatsapp-float"
    target="_blank">
-   <i class="fab fa-whatsapp"></i>
+   💬
 </a>
+
+<script src="script.js"></script>
 
 </body>
 </html>
