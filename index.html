@@ -241,13 +241,24 @@ section{padding:60px 25px;}
 <h1>From Amar To Tomar, Baribaba is Shobar</h1>
 <p>Rent • Buy • Sell • Manage — All Real Estate Solutions in One Place</p>
 
-<form class="search-box">
-<input type="text" placeholder="Enter Location"/>
-<select><option>Property Type</option></select>
-<select><option>Category</option></select>
-<button>Search</button>
-</form>
-</div>
+<form class="search-box" action="search.html" method="GET">
+      <input type="text" name="location" placeholder="Enter Location" />
+      <select name="type">
+        <option value="">Property Type</option>
+        <option>Rent</option>
+        <option>Buy</option>
+      </select>
+      <select name="category">
+        <option value="">Category</option>
+        <option>Flat</option>
+        <option>Room / PG</option>
+        <option>House</option>
+        <option>Office</option>
+        <option>Commercial</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
 </div>
 
 <!-- ✅ AUTO SLIDER BELOW CATEGORY -->
